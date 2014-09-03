@@ -70,3 +70,1170 @@ Stack trace:
 REQUEST_URI=/monitoring/index.php?r=site/login
 HTTP_REFERER=http://monitoring2/monitoring/index.php?r=site/login
 ---
+2014/09/03 11:50:48 [error] [exception.CException] exception 'CException' with message 'Неизвестный элемент авторизации "admin".' in Z:\home\monitoring2\www\framework\web\auth\CPhpAuthManager.php:179
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\components\PhpAuthManager.php(15): CPhpAuthManager->assign('admin', '1')
+#1 Z:\home\monitoring2\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(815): CWebApplication->getAuthManager()
+#4 Z:\home\monitoring2\www\monitoring\protected\views\layouts\main.php(33): CWebUser->checkAccess('admin')
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#9 Z:\home\monitoring2\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#12 Z:\home\monitoring2\www\monitoring\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#13 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#14 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#15 Z:\home\monitoring2\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#16 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): CController->render('index')
+#17 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 Z:\home\monitoring2\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#22 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#23 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/monitoring/index.php
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=site/login
+---
+2014/09/03 13:20:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=user
+---
+2014/09/03 13:22:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=user/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=user/index
+---
+2014/09/03 13:45:49 [error] [exception.CException] exception 'CException' with message 'User содержит неверное правило проверки. Правило должно иметь имя и включать элементы для проверки.' in Z:\home\monitoring2\www\framework\base\CModel.php:289
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\base\CModel.php(260): CModel->createValidators()
+#1 Z:\home\monitoring2\www\framework\base\CModel.php(547): CModel->getValidators()
+#2 Z:\home\monitoring2\www\framework\base\CModel.php(468): CModel->getSafeAttributeNames()
+#3 Z:\home\monitoring2\www\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#4 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(161): CComponent->__set('attributes', Array)
+#5 Z:\home\monitoring2\www\monitoring\protected\controllers\UserController.php(99): CActiveRecord->__set('attributes', Array)
+#6 [internal function]: UserController->actionUpdate('1')
+#7 Z:\home\monitoring2\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('update')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=user/update&id=1
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=user/update&id=1
+---
+2014/09/03 14:24:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 14:35:51 [error] [php] Missing argument 2 for CHtml::listData(), called in Z:\home\monitoring2\www\monitoring\protected\views\user\_form.php on line 42 and defined (Z:\home\monitoring2\www\framework\web\helpers\CHtml.php:2073)
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 Z:\home\monitoring2\www\framework\web\CController.php(869): UserController->renderFile()
+#2 Z:\home\monitoring2\www\monitoring\protected\views\user\update.php(21): UserController->renderPartial()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require()
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): UserController->renderInternal()
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): UserController->renderFile()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): UserController->renderPartial()
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\UserController.php(106): UserController->render()
+#8 unknown(0): UserController->actionUpdate()
+#9 Z:\home\monitoring2\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#13 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 Z:\home\monitoring2\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(265): UserController->runActionWithFilters()
+#19 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): UserController->run()
+#20 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 Z:\home\monitoring2\www\monitoring\index.php(13): CWebApplication->run()
+REQUEST_URI=/monitoring/index.php?r=user/update&id=1
+in Z:\home\monitoring2\www\monitoring\protected\views\user\_form.php (42)
+in Z:\home\monitoring2\www\monitoring\protected\views\user\update.php (21)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\UserController.php (106)
+2014/09/03 14:58:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 14:58:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 15:02:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 15:57:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:00:39 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=:id.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:00:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=:id' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:01:04 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id={id}.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:01:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id={id}' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:01:20 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id={$id}.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:01:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id={$id}' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:01:46 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=$id.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:01:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=$id' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:05:50 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.enterprise_id".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('enterprise_id')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('enterprise_id')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:09:50 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:09:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:11:39 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:23:52 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:24:32 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "User.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\monitoring\protected\components\WebUser.php(14): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\base\CComponent.php(111): WebUser->getId_enterprise()
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('id_enterprise')
+#4 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('id_enterprise')
+#5 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#7 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#9 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#10 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#11 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#19 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#22 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:25:25 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:25:27 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:27:30 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.getId".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('getId')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:28:39 [error] [exception.CException] exception 'CException' with message 'Неизвестный элемент авторизации "".' in Z:\home\monitoring2\www\framework\web\auth\CPhpAuthManager.php:179
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\components\PhpAuthManager.php(15): CPhpAuthManager->assign(NULL, NULL)
+#1 Z:\home\monitoring2\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(815): CWebApplication->getAuthManager()
+#4 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(346): CWebUser->checkAccess('admin')
+#5 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(284): CAccessRule->isRoleMatched(Object(WebUser))
+#6 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(EnterpriseController), Object(CInlineAction), '127.0.0.1', 'GET')
+#7 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#8 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#15 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:29:42 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.getEnId".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('getEnId')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('getEnId')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:29:44 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.getEnId".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('getEnId')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('getEnId')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:32:59 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.enterprise_id".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('enterprise_id')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('enterprise_id')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:38:40 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:38:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:44:52 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=admin.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:44:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=admin' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:46:07 [error] [exception.CException] exception 'CException' with message 'В классе WebUser и его поведениях не найден метод или замыкание с именем "getE_ID".' in Z:\home\monitoring2\www\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CComponent->__call('getE_ID', Array)
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): WebUser->getE_ID()
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:46:23 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=admin.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:46:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=admin' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:47:20 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "User.enterpris_id".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('enterpris_id')
+#1 Z:\home\monitoring2\www\monitoring\protected\components\WebUser.php(15): CActiveRecord->__get('enterpris_id')
+#2 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): WebUser->getE_ID()
+#3 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#9 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#10 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#20 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:47:50 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:47:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:49:06 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. Выполнявшийся SQL-запрос: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=.
+in Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php (61)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php (145)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 16:49:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_enterprise` `t` WHERE id=' in Z:\home\monitoring2\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 Z:\home\monitoring2\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 Z:\home\monitoring2\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 Z:\home\monitoring2\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 Z:\home\monitoring2\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 Z:\home\monitoring2\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 Z:\home\monitoring2\www\framework\web\CBaseController.php(147): CGridView->init()
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(61): CBaseController->widget('zii.widgets.gri...', Array)
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#12 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#13 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#14 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#15 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#16 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#24 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#27 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 16:53:26 [error] [exception.CException] exception 'CException' with message 'Неизвестный элемент авторизации "".' in Z:\home\monitoring2\www\framework\web\auth\CPhpAuthManager.php:179
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\components\PhpAuthManager.php(15): CPhpAuthManager->assign(NULL, '9')
+#1 Z:\home\monitoring2\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(815): CWebApplication->getAuthManager()
+#4 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(346): CWebUser->checkAccess('admin')
+#5 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(284): CAccessRule->isRoleMatched(Object(WebUser))
+#6 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(EnterpriseController), Object(CInlineAction), '127.0.0.1', 'GET')
+#7 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#8 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#15 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 17:03:49 [error] [exception.CException] exception 'CException' with message 'Неизвестный элемент авторизации "".' in Z:\home\monitoring2\www\framework\web\auth\CPhpAuthManager.php:179
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\components\PhpAuthManager.php(15): CPhpAuthManager->assign(NULL, '9')
+#1 Z:\home\monitoring2\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(815): CWebApplication->getAuthManager()
+#4 Z:\home\monitoring2\www\monitoring\protected\views\layouts\main.php(34): CWebUser->checkAccess('admin')
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#9 Z:\home\monitoring2\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#12 Z:\home\monitoring2\www\monitoring\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#13 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#14 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#15 Z:\home\monitoring2\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#16 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): CController->render('index')
+#17 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 Z:\home\monitoring2\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#22 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#23 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/monitoring/index.php
+---
+2014/09/03 17:03:57 [error] [exception.CException] exception 'CException' with message 'Неизвестный элемент авторизации "".' in Z:\home\monitoring2\www\framework\web\auth\CPhpAuthManager.php:179
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\components\PhpAuthManager.php(15): CPhpAuthManager->assign(NULL, '9')
+#1 Z:\home\monitoring2\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#3 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(815): CWebApplication->getAuthManager()
+#4 Z:\home\monitoring2\www\monitoring\protected\views\layouts\main.php(34): CWebUser->checkAccess('admin')
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#9 Z:\home\monitoring2\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#11 Z:\home\monitoring2\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#12 Z:\home\monitoring2\www\monitoring\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#13 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#14 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#15 Z:\home\monitoring2\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#16 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): CController->render('index')
+#17 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 Z:\home\monitoring2\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#22 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#23 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/monitoring/index.php
+---
+2014/09/03 17:07:14 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.enterprise_id".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('enterprise_id')
+#1 Z:\home\monitoring2\www\monitoring\protected\views\site\index.php(17): CWebUser->__get('enterprise_id')
+#2 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', NULL, true)
+#4 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', NULL, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#6 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): CController->render('index')
+#7 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\monitoring2\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#12 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/monitoring/index.php
+---
+2014/09/03 17:15:29 [error] [php] Object of class User could not be converted to string (Z:\home\monitoring2\www\monitoring\protected\views\site\index.php:19)
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CController.php(869): SiteController->renderFile()
+#1 Z:\home\monitoring2\www\framework\web\CController.php(782): SiteController->renderPartial()
+#2 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): SiteController->render()
+#3 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\monitoring2\www\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CWebApplication->run()
+REQUEST_URI=/monitoring/index.php
+in Z:\home\monitoring2\www\monitoring\protected\views\site\index.php (19)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php (32)
+in Z:\home\monitoring2\www\monitoring\index.php (13)
+2014/09/03 17:17:58 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "User.getID".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('getID')
+#1 Z:\home\monitoring2\www\monitoring\protected\views\site\index.php(17): CActiveRecord->__get('getID')
+#2 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', NULL, true)
+#4 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', NULL, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#6 Z:\home\monitoring2\www\monitoring\protected\controllers\SiteController.php(32): CController->render('index')
+#7 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\monitoring2\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('')
+#12 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/monitoring/index.php
+---
+2014/09/03 17:23:29 [error] [exception.CException] exception 'CException' with message 'В классе WebUser и его поведениях не найден метод или замыкание с именем "getEID".' in Z:\home\monitoring2\www\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CComponent->__call('getEID', Array)
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): WebUser->getEID()
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 17:24:50 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.getEID".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CWebUser.php(146): CComponent->__get('getEID')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(95): CWebUser->__get('getEID')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/03 17:26:34 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Enterprise.getEID".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('getEID')
+#1 Z:\home\monitoring2\www\monitoring\protected\models\Enterprise.php(100): CActiveRecord->__get('getEID')
+#2 Z:\home\monitoring2\www\monitoring\protected\views\enterprise\admin.php(45): Enterprise->search()
+#3 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#4 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#5 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#6 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 Z:\home\monitoring2\www\monitoring\protected\controllers\EnterpriseController.php(145): CController->render('admin', Array)
+#8 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): EnterpriseController->actionAdmin()
+#9 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/admi...')
+#19 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---

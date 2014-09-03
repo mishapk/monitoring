@@ -39,13 +39,21 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'enterprise_id'); ?>
-		<?php echo $form->textField($model,'enterprise_id'); ?>
+		<?php 
+                     $a_lookup=array();
+                     $a_lookup=CHtml::listData(Enterprise::model()->findAll(),'id','title');  
+                     $a_lookup['0']='Все';
+                     $a_lookup=array('' => '')+$a_lookup;
+                     echo $form->dropDownList($model,'enterprise_id',$a_lookup); ?>
 		<?php echo $form->error($model,'enterprise_id'); ?>
 	</div>
 
-	<div class="row">
+	
+        <div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'role',array(''=>'','user'=>'User','admin'=>'Admin','enterprise_user'=>'Enterprise User','entterprise_moderator'=>'Enterprise Moderator','device'=>'Device')
+                        // ,array('size'=>'6')
+                      ); ?>
 		<?php echo $form->error($model,'role'); ?>
 	</div>
 
