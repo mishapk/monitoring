@@ -17,7 +17,11 @@ class WebUser extends CWebUser {
         }
         return $this->_model;
     }
-    
+   function getEID(){
+              $num= Yii::app()->user->getid();
+              $id=User::model()->find('id=:num',array(':num'=>$num));
+              return $id->enterprise_id;
+         } 
     
 }
 ?>

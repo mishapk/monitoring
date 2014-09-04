@@ -2,7 +2,15 @@
 
 class EnterpriseController extends Controller
 {
-	/**
+//------------------------------------------------------------------------------	
+  public function accessCompare($id)
+    {
+       $idE=Yii::app()->user->getEID();	
+            if (($idE>0)&& ($idE!=$id)) 
+                throw new CHttpException(403, 'Forbidden');
+    }
+//------------------------------------------------------------------------------    
+    /**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
@@ -28,18 +36,18 @@ class EnterpriseController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view','admin'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('update'),
 				//'users'=>array('@'),
                                 'roles'=>array('admin'), 
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('delete','create'),
 				//'users'=>array('admin'),
-                               'roles'=>array('admin'), 
+                               'roles'=>array('root'), 
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -53,8 +61,9 @@ class EnterpriseController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+	        $this->accessCompare($id);
+                $this->render('view',array(
+		'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -88,7 +97,8 @@ class EnterpriseController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+            $this->accessCompare($id);
+            $model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -112,7 +122,8 @@ class EnterpriseController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+	    $this->accessCompare($id);	
+            $this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -124,7 +135,13 @@ class EnterpriseController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Enterprise');
+		
+                $criteria = new CDbCriteria();
+                $id=yii::app()->user->getEID();
+                if($id>0)$criteria->condition='id='.$id;
+                $dataProvider=new CActiveDataProvider('Enterprise',
+                        array('criteria'=>$criteria,));
+                
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

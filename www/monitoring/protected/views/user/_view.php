@@ -22,7 +22,8 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('enterprise_id')); ?>:</b>
-	<?php echo CHtml::encode($data->enterprise_id); ?>
+	<?php //echo CHtml::encode($data->enterprise_id); ?>
+        <?php echo CHtml::encode($data->enterprise?$data->enterprise->title:"-"); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('role')); ?>:</b>

@@ -30,17 +30,17 @@ class UserController extends Controller
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				//'users'=>array('*'),
-                                  'roles'=>array('admin'), 
+                                  'roles'=>array('root'), 
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				//'users'=>array('@'),
-                                'roles'=>array('admin'), 
+                                'roles'=>array('root'), 
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				//'users'=>array('admin'),
-                              'roles'=>array('admin'), 
+                              'roles'=>array('root'), 
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -124,7 +124,7 @@ class UserController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{   
 		$dataProvider=new CActiveDataProvider('User');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -140,7 +140,7 @@ class UserController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))
 			$model->attributes=$_GET['User'];
-
+                       
 		$this->render('admin',array(
 			'model'=>$model,
 		));

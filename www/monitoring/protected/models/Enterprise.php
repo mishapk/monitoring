@@ -79,11 +79,7 @@ class Enterprise extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-        private function getEID(){
-              $num= Yii::app()->user->getid();
-              $id=User::model()->find('id=:num',array(':num'=>$num));
-              return $id->enterprise_id;
-         }
+        
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
@@ -97,7 +93,7 @@ class Enterprise extends CActiveRecord
 		$criteria->compare('e_lng',$this->e_lng);
 		$criteria->compare('e_lat',$this->e_lat);
 		$criteria->compare('user_id',$this->user_id);
-                $id=  $this->getEID();
+                $id=yii::app()->user->getEID();
                 if($id>0) $criteria->condition='id='.$id;
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

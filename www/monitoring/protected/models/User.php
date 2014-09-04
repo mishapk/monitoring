@@ -10,10 +10,12 @@
  * @property string $email
  * @property integer $enterprise_id
  * @property string $role
+ *  @property string $Eid
  */
 class User extends CActiveRecord
 {
-	/**
+    public $enterprise_search;
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -23,7 +25,9 @@ class User extends CActiveRecord
 //------------------------------------------------------------------------------
         public function beforeSave()
         {
-             $this->password=$this->hashPassword($this->password);
+            if ($this->isNewRecord) 
+              $this->password=$this->hashPassword($this->password);
+            
              return parent::beforeSave(); 
         }        
 //-------------------------------------------------------------------------------  
@@ -36,13 +40,16 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username, password, email, enterprise_id, role', 'required'),
-			array('enterprise_id', 'numerical', 'integerOnly'=>true),
-			array('username, password, email', 'length', 'max'=>128),
-			array('role', 'length', 'max'=>20),
+			array('username', 'unique','allowEmpty'=>false),
+                        array('email','email'),
+                        array('password','length','min'=>6),
+                        array('enterprise_id', 'numerical', 'integerOnly'=>true),
+			array('username, password, email, role', 'length', 'max'=>128),
+			
                         
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email, enterprise_id, role', 'safe', 'on'=>'search'),
+			array('id, username, password, email, enterprise_id, role, enterprise_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +61,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'enterprise'   => array(self::BELONGS_TO, 'Enterprise', 'enterprise_id'),
 		);
 	}
 
@@ -69,6 +77,7 @@ class User extends CActiveRecord
 			'email' => 'Email',
 			'enterprise_id' => 'Enterprise',
 			'role' => 'Role',
+                        'enterprise_search' => 'Enterprise',
 		);
 	}
 
@@ -95,10 +104,23 @@ class User extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('enterprise_id',$this->enterprise_id);
-		$criteria->compare('role',$this->role,true);
+                //-------------------------------------------------------
+                $criteria->with= array('enterprise');
+		$criteria->compare('enterprise.title',$this->enterprise_search,true);
+                //--------------------------------------------------------
+                $criteria->compare('role',$this->role,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+                          'sort'=>array(
+                            'attributes'=>array(
+                             'author_search'=>array(
+                                 'asc'=>'enterprise.title',
+                                   'desc'=>'enterprise.title DESC',
+                                  ),
+                              '*',
+                              ),
+                           ),
 		));
 	}
 //-------------------------------------------------------------------------------

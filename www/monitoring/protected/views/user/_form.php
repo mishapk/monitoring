@@ -51,7 +51,7 @@
 	
         <div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->dropDownList($model,'role',array(''=>'','user'=>'User','admin'=>'Admin','enterprise_user'=>'Enterprise User','entterprise_moderator'=>'Enterprise Moderator','device'=>'Device')
+		<?php echo $form->dropDownList($model,'role',array(''=>'','user'=>'User','admin'=>'Admin','root'=>'Root','device'=>'Device')
                         // ,array('size'=>'6')
                       ); ?>
 		<?php echo $form->error($model,'role'); ?>

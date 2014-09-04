@@ -14,7 +14,8 @@ $this->pageTitle=Yii::app()->name;
 	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
 </ul>
 <?php 
-  $num= Yii::app()->user->getid();
+echo 'hash=',CPasswordHelper::hashPassword('admin'),'<br>';  
+$num= Yii::app()->user->getid();
   echo 'Num=',$num;
   $id=User::model()->find('id=:num',array(':num'=>$num));
   echo'<br> id=', $id->enterprise_id;

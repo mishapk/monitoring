@@ -33,5 +33,14 @@ return array(
         'bizRule' => null,
         'data' => null
     ),
+    'root' => array(
+        'type' => CAuthItem::TYPE_ROLE,
+        'description' => 'Root',
+        'children' => array(
+            'admin',         // позволим админу всё, что позволено модератору
+        ),
+        'bizRule' => null,
+        'data' => null
+    ),
 );
 ?>
