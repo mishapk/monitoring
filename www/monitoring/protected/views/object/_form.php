@@ -1,13 +1,13 @@
 <?php
-/* @var $this EnterpriseController */
-/* @var $model Enterprise */
+/* @var $this ObjectController */
+/* @var $model Object */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'enterprise-form',
+	'id'=>'object-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -26,30 +26,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'address'); ?>
+		<?php echo $form->labelEx($model,'place'); ?>
+		<?php echo $form->textField($model,'place',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'place'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'info'); ?>
-		<?php echo $form->textArea($model,'info',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'info'); ?>
+        <div class="row">
+		<?php echo $form->labelEx($model,'id_enterprise'); ?>
+		<?php 
+                     $a_lookup=array();
+                     $num=Yii::app()->user->getEID();
+                     $a_lookup=$num==0?array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title'):
+                         CHtml::listData(Enterprise::model()->findAll('id=:num',array(':num'=>$num)),'id','title');  
+                  //   $a_lookup['0']='Все';
+                   //  $a_lookup=array('' => '')+$a_lookup;
+                     echo $form->dropDownList($model,'id_enterprise',$a_lookup); ?>
+		<?php echo $form->error($model,'id_enterprise'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'e_lng'); ?>
-		<?php echo $form->textField($model,'e_lng'); ?>
-		<?php echo $form->error($model,'e_lng'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'e_lat'); ?>
-		<?php echo $form->textField($model,'e_lat'); ?>
-		<?php echo $form->error($model,'e_lat'); ?>
-	</div>
-
-	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

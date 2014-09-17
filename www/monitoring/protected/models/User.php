@@ -23,13 +23,30 @@ class User extends CActiveRecord
 		return 'tbl_user';
 	}
 //------------------------------------------------------------------------------
+        public function afterValidate()
+        {
+            
+        }        
+//------------------------------------------------------------------------------        
         public function beforeSave()
         {
-            if ($this->isNewRecord) 
+          
+            if ($this->new_password)
+               $this->password = $this->hashPassword($this->new_password);
+                
+            /*  if ($this->isNewRecord){ 
               $this->password=$this->hashPassword($this->password);
+        
+            } else {
+               $model = User::model()->findByPk($this->id);
+               $model->scenario = 'update';
+               $this->password=!$this->validatePassword($model->password)?$this->password:$this->hashPassword($this->password);
+             }
             
-             return parent::beforeSave(); 
-        }        
+           */
+            return parent::beforeSave(); 
+        }    
+  //----------------------------------------------------------------------------      
 //-------------------------------------------------------------------------------  
 	/**
 	 * @return array validation rules for model attributes.
@@ -39,17 +56,19 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, enterprise_id, role', 'required'),
+			array('username, email, enterprise_id, role', 'required'),
+                        array('username', 'match', 'pattern'=>'#^[a-zA-Z0-9_\.-]+$#'),
 			array('username', 'unique','allowEmpty'=>false),
                         array('email','email'),
-                        array('password','length','min'=>6),
+                        array('new_password','length','min'=>6, 'allowEmpty'=>true),
                         array('enterprise_id', 'numerical', 'integerOnly'=>true),
-			array('username, password, email, role', 'length', 'max'=>128),
-			
+			array('username, new_password, email, role', 'length', 'max'=>128),
+			array('new_confirm', 'compare', 'compareAttribute'=>'new_password'),
                         
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email, enterprise_id, role, enterprise_search', 'safe', 'on'=>'search'),
+			array('id, username, email, enterprise_id, role, enterprise_search', 'safe', 'on'=>'search'),
+                    array('new_password', 'required', 'on'=>'register'),
 		);
 	}
 
@@ -73,7 +92,8 @@ class User extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'username' => 'Username',
-			'password' => 'Password',
+			'new_password' => 'Password',
+                        'new_confirm' => 'Confirm password',
 			'email' => 'Email',
 			'enterprise_id' => 'Enterprise',
 			'role' => 'Role',
@@ -124,6 +144,8 @@ class User extends CActiveRecord
 		));
 	}
 //-------------------------------------------------------------------------------
+public $new_password;
+public $new_confirm;
 public function validatePassword($password)
     {
         return CPasswordHelper::verifyPassword($password,$this->password);

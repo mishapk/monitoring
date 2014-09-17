@@ -27,6 +27,6 @@ $this->menu=array(
 		'info',
 		'e_lng',
 		'e_lat',
-		'user_id',
+		
 	),
 )); ?>

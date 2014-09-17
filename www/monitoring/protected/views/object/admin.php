@@ -1,15 +1,15 @@
 <?php
-/* @var $this UserController */
-/* @var $model User */
+/* @var $this ObjectController */
+/* @var $model Object */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Objects'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
+	array('label'=>'List Object', 'url'=>array('index')),
+	array('label'=>'Create Object', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#user-grid').yiiGridView('update', {
+	$('#object-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Users</h1>
+<h1>Manage Objects</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,21 +40,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
+<?php
+    if(!Yii::app()->user->checkAccess('root')) 
+        $options='display:none'; 
+    $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'object-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'username',
-		'password',
-		'email',
-	//	'enterprise_id',
-		'role',
-            array('name'=>'enterprise_search','value'=>'$data->enterprise?$data->enterprise->title:"-"'),
+		'title',
+		'place',
+		//'id_enterprise',
+                array('name'=>'enterprise_search','value'=>'$data->enterprise?$data->enterprise->title:"-"'),
 		array(
 			'class'=>'CButtonColumn',
-                        
+                        'deleteButtonOptions'=>array('style'=>$options),
 		),
 	),
 )); ?>

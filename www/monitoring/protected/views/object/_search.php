@@ -1,6 +1,6 @@
 <?php
-/* @var $this UserController */
-/* @var $model User */
+/* @var $this ObjectController */
+/* @var $model Object */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,23 +17,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->label($model,'place'); ?>
+		<?php echo $form->textField($model,'place',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'enterprise'); ?>
 		<?php echo $form->textField($model,'enterprise_search'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'role'); ?>
-		<?php echo $form->textField($model,'role',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row buttons">
