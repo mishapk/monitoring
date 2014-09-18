@@ -5057,3 +5057,740 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/monitoring/index.php?r=object/delete&id=3
 ---
+2014/09/18 13:50:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/admin')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/index
+---
+2014/09/18 13:51:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/admin')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/admin
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/index
+---
+2014/09/18 13:55:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('stype/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=stype/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=stype/admin
+---
+2014/09/18 13:56:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('stype/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=stype/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=stype/admin
+---
+2014/09/18 13:56:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('stype/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=stype/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=stype/admin
+---
+2014/09/18 13:56:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('stype/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=stype/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=stype/admin
+---
+2014/09/18 13:56:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('stype/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=stype/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=stype/admin
+---
+2014/09/18 13:57:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('object/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=object/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=object/index
+---
+2014/09/18 13:57:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/crea...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/18 13:57:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('object/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=object/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=object/index
+---
+2014/09/18 13:59:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('enterprise/crea...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=enterprise/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=enterprise/index
+---
+2014/09/18 14:00:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/index
+---
+2014/09/18 14:56:10 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), 'id_enterprise')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), 'id_enterprise', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(54): CActiveForm->dropDownList(Object(Sensor), 'id_enterprise', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/index
+---
+2014/09/18 14:57:35 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), 'id_enterprise')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), 'id_enterprise', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(54): CActiveForm->dropDownList(Object(Sensor), 'id_enterprise', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/index
+---
+2014/09/18 15:15:23 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), 'id_enterprise')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), 'id_enterprise', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(73): CActiveForm->dropDownList(Object(Sensor), 'id_enterprise', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 15:16:06 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), 'id_enterprise')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), 'id_enterprise', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(73): CActiveForm->dropDownList(Object(Sensor), 'id_enterprise', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 15:19:12 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.id_enterprise".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_enterprise')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_enterprise')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), 'id_enterprise')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), 'id_enterprise', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(73): CActiveForm->dropDownList(Object(Sensor), 'id_enterprise', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 15:54:39 [error] [php] Object of class Sensor could not be converted to string (Z:\home\monitoring2\www\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(73): dropDownList()
+#1 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require()
+#2 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): SensorController->renderInternal()
+#3 Z:\home\monitoring2\www\framework\web\CController.php(869): SensorController->renderFile()
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): SensorController->renderPartial()
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require()
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): SensorController->renderInternal()
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): SensorController->renderFile()
+#8 Z:\home\monitoring2\www\framework\web\CController.php(782): SensorController->renderPartial()
+#9 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): SensorController->render()
+#10 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#11 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): SensorController->runAction()
+#13 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 Z:\home\monitoring2\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): SensorController->filterAccessControl()
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(265): SensorController->runActionWithFilters()
+#19 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): SensorController->run()
+#20 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 Z:\home\monitoring2\www\monitoring\index.php(13): CWebApplication->run()
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+in Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php (73)
+in Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php (18)
+in Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php (81)
+2014/09/18 16:22:13 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), '')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), '', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(82): CActiveForm->dropDownList(Object(Sensor), '', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:22:34 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Sensor.".' in Z:\home\monitoring2\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('')
+#1 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('')
+#2 Z:\home\monitoring2\www\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Sensor), '')
+#3 Z:\home\monitoring2\www\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Sensor), '', Array, Array)
+#4 Z:\home\monitoring2\www\monitoring\protected\views\sensor\_form.php(73): CActiveForm->dropDownList(Object(Sensor), '', Array)
+#5 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#6 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#7 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#8 Z:\home\monitoring2\www\monitoring\protected\views\sensor\create.php(18): CController->renderPartial('_form', Array)
+#9 Z:\home\monitoring2\www\framework\web\CBaseController.php(126): require('Z:\home\monitor...')
+#10 Z:\home\monitoring2\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\monitor...', Array, true)
+#11 Z:\home\monitoring2\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\monitor...', Array, true)
+#12 Z:\home\monitoring2\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 Z:\home\monitoring2\www\monitoring\protected\controllers\SensorController.php(81): CController->render('create', Array)
+#14 Z:\home\monitoring2\www\framework\web\actions\CInlineAction.php(49): SensorController->actionCreate()
+#15 Z:\home\monitoring2\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('create')
+#24 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/create')
+#25 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/create
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:30:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:30:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:44:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:45:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "SensorController/dynamiccities".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('SensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=SensorController/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:48:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:48:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\monitoring2\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\monitoring2\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\monitoring2\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\monitoring2\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\monitoring2\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\monitoring2\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#8 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#9 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+---
+2014/09/18 16:50:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "dynamiccities".' in Z:\home\monitoring2\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CController.php(270): CController->missingAction('dynamiccities')
+#1 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#3 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+---
+2014/09/18 16:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "dynamiccities".' in Z:\home\monitoring2\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CController.php(270): CController->missingAction('dynamiccities')
+#1 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#3 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+---
+2014/09/18 16:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "dynamiccities".' in Z:\home\monitoring2\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CController.php(270): CController->missingAction('dynamiccities')
+#1 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#3 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 16:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "dynamiccities".' in Z:\home\monitoring2\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CController.php(270): CController->missingAction('dynamiccities')
+#1 Z:\home\monitoring2\www\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#2 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensor/dynamicc...')
+#3 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/monitoring/index.php?r=sensor/dynamiccities
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 17:23:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamicobject".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamicobject
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 17:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "currentController/dynamicobject".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=currentController/dynamicobject
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 17:23:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "sensorController/dynamicobject".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=sensorController/dynamicobject
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 17:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "sensorController/dynamicobject".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=sensorController/dynamicobject
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---
+2014/09/18 17:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "sensorController/dynamicobject".' in Z:\home\monitoring2\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\monitoring2\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sensorControlle...')
+#1 Z:\home\monitoring2\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\monitoring2\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=sensorController/dynamicobject
+HTTP_REFERER=http://monitoring2/monitoring/index.php?r=sensor/create
+---

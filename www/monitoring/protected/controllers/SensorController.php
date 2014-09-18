@@ -1,20 +1,32 @@
 <?php
 
-class ObjectController extends Controller
+class SensorController extends Controller
 {
-	/**
+	//------------------------------------------------------------------
+    public function actionDynamicobject()
+        {
+      //  echo '11111111111111111';     
+        $data=Object::model()->findAll('id_enterprise=:id_enterprise', 
+                  array(':id_enterprise'=>(int) $_POST['id_enterprise']));
+ 
+            $data=CHtml::listData($data,'id','title');
+          // echo $data;
+            foreach($data as $value=>$title)
+                {
+                 echo CHtml::tag('option',
+                   array('value'=>$value),CHtml::encode($title),true);
+                 
+            }
+            
+    }
+        //------------------------------------------------------------------
+    
+    
+        /**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-        //-----------------------------------------------------------------------
-           public function accessCompare($id)
-         {
-            $idO=Yii::app()->user->getOID();	
-            if (($idO>0)&& ($idO!=$id)) 
-                throw new CHttpException(403, 'Forbidden');
-             }    
-        //-----------------------------------------------------------------------
 
 	/**
 	 * @return array action filters
@@ -40,14 +52,14 @@ class ObjectController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update'),
+				'actions'=>array('update','dynamicobject'),
 				//'users'=>array('@'),
                                 'roles'=>array('admin'), 
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('delete','create'),
 				//'users'=>array('admin'),
-                               'roles'=>array('admin'), 
+                               'roles'=>array('root'), 
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -61,10 +73,7 @@ class ObjectController extends Controller
 	 */
 	public function actionView($id)
 	{
-	    
-            $this->accessCompare($id);
-            	
-            $this->render('view',array(
+		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -75,14 +84,14 @@ class ObjectController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Object;
+		$model=new Sensor;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Object']))
+		if(isset($_POST['Sensor']))
 		{
-			$model->attributes=$_POST['Object'];
+			$model->attributes=$_POST['Sensor'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -99,15 +108,14 @@ class ObjectController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-            $this->accessCompare($id);
-            $model=$this->loadModel($id);
+		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Object']))
+		if(isset($_POST['Sensor']))
 		{
-			$model->attributes=$_POST['Object'];
+			$model->attributes=$_POST['Sensor'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -123,8 +131,7 @@ class ObjectController extends Controller
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id)
-	{       
-                $this->accessCompare($id);
+	{
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -136,15 +143,8 @@ class ObjectController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-                
 	{
-		$criteria = new CDbCriteria();
-                $id=yii::app()->user->getEID();
-                if($id>0)$criteria->condition='id_enterprise='.$id;
-                $dataProvider=new CActiveDataProvider('Object',
-                        array('criteria'=>$criteria,));
-            
-              //  $dataProvider=new CActiveDataProvider('Object');
+		$dataProvider=new CActiveDataProvider('Sensor');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -155,10 +155,10 @@ class ObjectController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Object('search');
+		$model=new Sensor('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Object']))
-			$model->attributes=$_GET['Object'];
+		if(isset($_GET['Sensor']))
+			$model->attributes=$_GET['Sensor'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -169,12 +169,12 @@ class ObjectController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Object the loaded model
+	 * @return Sensor the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Object::model()->findByPk($id);
+		$model=Sensor::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -182,11 +182,11 @@ class ObjectController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Object $model the model to be validated
+	 * @param Sensor $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='object-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='sensor-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
