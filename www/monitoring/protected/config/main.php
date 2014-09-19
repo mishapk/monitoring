@@ -66,7 +66,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=monitoring',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '357xxx',
 			'charset' => 'utf8',
 		),
 		//*/

@@ -5,19 +5,27 @@ class SensorController extends Controller
 	//------------------------------------------------------------------
     public function actionDynamicobject()
         {
-      //  echo '11111111111111111';     
+      
+                
         $data=Object::model()->findAll('id_enterprise=:id_enterprise', 
                   array(':id_enterprise'=>(int) $_POST['id_enterprise']));
  
             $data=CHtml::listData($data,'id','title');
           // echo $data;
+               
+            if(count($data)) 
+            {  
+                 echo CHtml::tag('option',
+                   array('value'=>''),CHtml::encode('Select'),true);
             foreach($data as $value=>$title)
                 {
                  echo CHtml::tag('option',
-                   array('value'=>$value),CHtml::encode($title),true);
-                 
+                   array('value'=>$value),CHtml::encode($title),true);    
             }
-            
+            }
+            else 
+            echo CHtml::tag('option',
+                   array('value'=>''),CHtml::encode('Objects no found'),true);
     }
         //------------------------------------------------------------------
     
@@ -109,7 +117,7 @@ class SensorController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 

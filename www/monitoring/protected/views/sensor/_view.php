@@ -21,8 +21,8 @@
 	<?php echo CHtml::encode($data->place); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_type')); ?>:</b>
-	<?php echo CHtml::encode($data->id_type); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('type')); ?>:</b>
+	<?php echo CHtml::encode($data->type->title); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('x_cord')); ?>:</b>
@@ -33,15 +33,18 @@
 	<?php echo CHtml::encode($data->y_cord); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('state')); ?>:</b>
+	<b>
+	<?php echo CHtml::encode($data->getAttributeLabel('state')); ?>:</b>
 	<?php echo CHtml::encode($data->state); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_object')); ?>:</b>
-	<?php echo CHtml::encode($data->id_object); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('objects')); ?>:</b>
+	<?php echo CHtml::encode($data->objects->title); ?>
 	<br />
-
-	*/ ?>
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('enterprise')); ?>:</b>
+	<?php echo CHtml::encode($data->objects->enterprise->title); ?>
+	<br />
+	 
 
 </div>

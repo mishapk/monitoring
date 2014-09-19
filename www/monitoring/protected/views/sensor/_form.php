@@ -64,40 +64,40 @@
 		<?php echo $form->textField($model,'state'); ?>
 		<?php echo $form->error($model,'state'); ?>
 	</div>
-       //---------------------------------------------------------------------------------------------------- 
+      <?php//------------------------------------------------------------------------------?>
        <div class="row">
 		<?php echo $form->labelEx($model,'id_enterprise'); ?>
 		<?php 
-                     $a_lookup=array();
-                     $a_lookup=array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title');
-                      echo CHtml::dropDownList('id_enterprise','',$a_lookup,
+                 $num=$model->id_object;  
+                 $object=  Object::model()->find('id=:num',array(':num'=>$num));
+                 $def=$object->id_enterprise; 
+                      echo CHtml::dropDownList('id_enterprise','',Enterprise::getEnterprises(),
                               array(
+                              'options' => array($def=>array('selected'=>true)),    
                               'ajax' => array(
                                'type'=>'POST', //request type
                                 'url'=>CController::createUrl('sensor/dynamicobject'), //url to call.
                                 //Style: CController::createUrl('currentController/methodToCall')
-                                'update'=>'#id_object', //selector to update
+                                'update'=>'#'.CHtml::activeId($model,'id_object'), //selector to update
                                  //'data'=>'js:javascript statement' 
                                 //leave out the data key to pass all form values through
-                                ))); 
-                 echo CHtml::dropDownList('id_enterprise','', array());     
+                                )));    
                       ?>
-		<?php echo $form->error($model,'id_object'); ?>
+		<?php echo $form->error($model,'id_enterprise'); ?>
 	</div>
-     //-----------------------------------------------------------------------------------------  
+      <?php//------------------------------------------------------------------------------?>
         <div class="row">
 		<?php echo $form->labelEx($model,'id_object'); ?>
 		<?php 
-                     $a_lookup=array();
-                     $a_lookup=array('' => 'Select')+CHtml::listData(Object::model()->findAll(),'id','title');
-                      echo $form->dropDownList($model,'id_object',$a_lookup); ?>
+                     $a_lookup=array(''=>'Select Enterprise');
+                   if( isset($def)) 
+                     $a_lookup=array('' => 'Select')+CHtml::listData(Object::model()->findAll('id_enterprise=:num',array(':num'=>$def)),'id','title');
+                      echo $form->dropDownList($model,'id_object',$a_lookup,
+                              array(
+                              'options' => array($num=>array('selected'=>true))) ); ?>
 		<?php echo $form->error($model,'id_object'); ?>
 	</div>
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_object'); ?>
-		<?php echo $form->textField($model,'id_object'); ?>
-		<?php echo $form->error($model,'id_object'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

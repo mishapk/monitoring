@@ -20,7 +20,10 @@
  */
 class Sensor extends CActiveRecord
 {
-	/**
+        public $stype_search;
+        public $objects_search;
+        public $enterprise_search;
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -41,7 +44,7 @@ class Sensor extends CActiveRecord
 			array('title, place', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, address, title, place, id_type, x_cord, y_cord, state, id_object', 'safe', 'on'=>'search'),
+			array('id, address, title, place, id_type, x_cord, y_cord, state, stype_search,objects_search, enterprise_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,8 +56,9 @@ class Sensor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idType' => array(self::BELONGS_TO, 'TblStype', 'id_type'),
-			'idObject' => array(self::BELONGS_TO, 'TblObjec', 'id_object'),
+			'type' => array(self::BELONGS_TO, 'Stype', 'id_type'),
+			'objects' => array(self::BELONGS_TO, 'Object', 'id_object'),
+                      //  'enterprise'=>array(self::HAS_MANY,'Enterprise','id_enterprise','through'=>'objects'),
 		);
 	}
 
@@ -68,11 +72,12 @@ class Sensor extends CActiveRecord
 			'address' => 'Address',
 			'title' => 'Title',
 			'place' => 'Place',
-			'id_type' => 'Id Type',
+			'stype_search' => 'Type',
 			'x_cord' => 'X Cord',
 			'y_cord' => 'Y Cord',
 			'state' => 'State',
-			'id_object' => 'Id Object',
+			'objects_search' => 'Object',
+                        'enterprise_search' => 'Enterprise',
 		);
 	}
 
@@ -94,16 +99,23 @@ class Sensor extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('address',$this->address);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('place',$this->place,true);
-		$criteria->compare('id_type',$this->id_type);
-		$criteria->compare('x_cord',$this->x_cord);
-		$criteria->compare('y_cord',$this->y_cord);
-		$criteria->compare('state',$this->state);
-		$criteria->compare('id_object',$this->id_object);
-
+		$criteria->compare('t.id',$this->id);
+		$criteria->compare('t.address',$this->address);
+		$criteria->compare('t.title',$this->title,true);
+		$criteria->compare('t.place',$this->place,true);
+		//$criteria->compare('id_type',$this->id_type);
+		$criteria->compare('t.x_cord',$this->x_cord);
+		$criteria->compare('t.y_cord',$this->y_cord);
+		$criteria->compare('t.state',$this->state);
+		//$criteria->compare('id_object',$this->id_object);
+                 //-------------------------------------------------------
+                $criteria->with= array('type');
+		$criteria->compare('type.title',$this->stype_search,true);
+                $criteria->with= array('objects');
+		$criteria->compare('objects.title',$this->objects_search,true);
+            //   $criteria->with= array('enterprise');
+           //	$criteria->compare('enterprise.title',$this->enterprise_search,true);
+                //--------------------------------------------------------
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

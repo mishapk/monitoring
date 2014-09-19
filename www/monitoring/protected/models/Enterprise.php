@@ -17,6 +17,13 @@ class Enterprise extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+       public function getEnterprises()
+       {
+            
+           $res=array();
+            $res=array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title');
+            return $res;  
+       }        
 	public function tableName()
 	{
 		return 'tbl_enterprise';

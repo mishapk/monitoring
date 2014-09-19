@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 18 2014 г., 17:40
+-- Время создания: Сен 19 2014 г., 18:08
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -69,7 +69,8 @@ CREATE TABLE IF NOT EXISTS `tbl_objec` (
 INSERT INTO `tbl_objec` (`id`, `title`, `place`, `id_enterprise`) VALUES
 (3, 'Травилка', '', 2),
 (4, 'Травилка 2', '', 1),
-(5, 'АВК', 'Старое', 1);
+(5, 'АВК', 'Старое', 1),
+(6, 'Травилка ТТТ', 'Тиат', 3);
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,17 @@ CREATE TABLE IF NOT EXISTS `tbl_sensor` (
   UNIQUE KEY `id_2` (`id`),
   KEY `id_object` (`id_object`),
   KEY `id_type` (`id_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Дамп данных таблицы `tbl_sensor`
+--
+
+INSERT INTO `tbl_sensor` (`id`, `address`, `title`, `place`, `id_type`, `x_cord`, `y_cord`, `state`, `id_object`) VALUES
+(3, 1, '1', '1', 2, 1, 1, 1, 3),
+(4, 1, '1', '1', 1, 1, 1, 1, 4),
+(5, 11, 'ТЬ ЬТ', 'ффф', 1, 0, 0, 0, 6),
+(6, 10, 'Figg', 'sada', 3, 1, 1, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -165,8 +176,8 @@ ALTER TABLE `tbl_objec`
 -- Ограничения внешнего ключа таблицы `tbl_sensor`
 --
 ALTER TABLE `tbl_sensor`
-  ADD CONSTRAINT `tbl_sensor_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `tbl_stype` (`id`),
-  ADD CONSTRAINT `tbl_sensor_ibfk_1` FOREIGN KEY (`id_object`) REFERENCES `tbl_objec` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tbl_sensor_ibfk_1` FOREIGN KEY (`id_object`) REFERENCES `tbl_objec` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_sensor_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `tbl_stype` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

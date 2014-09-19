@@ -49,9 +49,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'address',
 		'title',
 		'place',
-		'id_type',
+                array('name'=>'stype_search','value'=>'$data->type?$data->type->title:"-"'),
+               array('name'=>'objects_search','value'=>'$data->objects?$data->objects->title:"-"'),
+             //   array('name'=>'enterprise_search','value'=>'$data->objects->enterprise?$data->objects->enterprise->title:"-"'),
+		/*'id_type',
 		'x_cord',
-		/*
+		
 		'y_cord',
 		'state',
 		'id_object',

@@ -32,8 +32,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_type'); ?>
-		<?php echo $form->textField($model,'id_type'); ?>
+		<?php echo $form->label($model,'type'); ?>
+		<?php echo $form->textField($model,'stype_search'); ?>
 	</div>
 
 	<div class="row">
@@ -52,8 +52,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_object'); ?>
-		<?php echo $form->textField($model,'id_object'); ?>
+		<?php echo $form->label($model,'objects'); ?>
+		<?php echo $form->textField($model,'objects_search'); ?>
+	</div>
+        <div class="row">
+		<?php echo $form->label($model,'enterprise'); ?>
+		<?php echo $form->textField($model,'enterprise_search'); ?>
 	</div>
 
 	<div class="row buttons">
