@@ -2,6 +2,15 @@
 
 class SensorController extends Controller
 {
+        //-----------------------------------------------------------------------
+           public function accessCompare($id)
+         {
+            //Idea: Select Criteria
+            $idO=Yii::app()->user->getOID();	
+            if (($idO>0)&& ($idO!=$id)) 
+                throw new CHttpException(403, 'Forbidden');
+             }    
+        //-----------------------------------------------------------------------	
 	//------------------------------------------------------------------
     public function actionDynamicobject()
         {
@@ -60,14 +69,14 @@ class SensorController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update','dynamicobject'),
+				'actions'=>array('update'),
 				//'users'=>array('@'),
                                 'roles'=>array('admin'), 
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('delete','create'),
 				//'users'=>array('admin'),
-                               'roles'=>array('root'), 
+                               'roles'=>array('admin'), 
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -81,6 +90,7 @@ class SensorController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$this->accessCompare($id);
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -116,6 +126,7 @@ class SensorController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		$this->accessCompare($id);
 		$model=$this->loadModel($id);
                 
 		// Uncomment the following line if AJAX validation is needed
@@ -140,6 +151,7 @@ class SensorController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		$this->accessCompare($id);
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -152,7 +164,14 @@ class SensorController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Sensor');
+		$criteria = new CDbCriteria();
+		$id=yii::app()->user->getEID();
+		if($id>0){
+		$criteria->with=array('enterprise');
+		$criteria->condition='id_enterprise='.$id;
+		}
+		$dataProvider=new CActiveDataProvider('Sensor',
+		array('criteria'=>$criteria,));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

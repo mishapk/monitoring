@@ -39,7 +39,7 @@ class Sensor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('address, title, place, id_type, x_cord, y_cord, state, id_object', 'required'),
+			array('address, title, place, id_type, x_cord, y_cord, state', 'required'),
 			array('address, id_type, x_cord, y_cord, state, id_object', 'numerical', 'integerOnly'=>true),
 			array('title, place', 'length', 'max'=>64),
 			// The following rule is used by search().
@@ -58,7 +58,8 @@ class Sensor extends CActiveRecord
 		return array(
 			'type' => array(self::BELONGS_TO, 'Stype', 'id_type'),
 			'objects' => array(self::BELONGS_TO, 'Object', 'id_object'),
-                      //  'enterprise'=>array(self::HAS_MANY,'Enterprise','id_enterprise','through'=>'objects'),
+                       'enterprise'=>array(self::HAS_ONE,'Enterprise',
+					array('id_enterprise'=>'id'),'through'=>'objects'),
 		);
 	}
 
@@ -98,24 +99,25 @@ class Sensor extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('t.id',$this->id);
-		$criteria->compare('t.address',$this->address);
-		$criteria->compare('t.title',$this->title,true);
-		$criteria->compare('t.place',$this->place,true);
+		$criteria->alias='sensor';
+		$criteria->compare('sensor.id',$this->id);
+		$criteria->compare('sensor.address',$this->address);
+		$criteria->compare('sensor.title',$this->title,true);
+		$criteria->compare('sensor.place',$this->place,true);
 		//$criteria->compare('id_type',$this->id_type);
-		$criteria->compare('t.x_cord',$this->x_cord);
-		$criteria->compare('t.y_cord',$this->y_cord);
-		$criteria->compare('t.state',$this->state);
+		$criteria->compare('sensor.x_cord',$this->x_cord);
+		$criteria->compare('sensor.y_cord',$this->y_cord);
+		$criteria->compare('sensor.state',$this->state);
 		//$criteria->compare('id_object',$this->id_object);
                  //-------------------------------------------------------
-                $criteria->with= array('type');
+                //$criteria->with= array('type','type.title'=array('alias'=>'t_title'));
+		$criteria->with= array('type','objects','enterprise');
 		$criteria->compare('type.title',$this->stype_search,true);
-                $criteria->with= array('objects');
 		$criteria->compare('objects.title',$this->objects_search,true);
-            //   $criteria->with= array('enterprise');
-           //	$criteria->compare('enterprise.title',$this->enterprise_search,true);
+        $criteria->compare('enterprise.title',$this->enterprise_search,true);
                 //--------------------------------------------------------
+		$id=yii::app()->user->getEID();
+                if($id>0) $criteria->condition='id_enterprise='.$id;
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

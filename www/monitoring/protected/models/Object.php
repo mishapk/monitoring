@@ -86,9 +86,9 @@ class Object extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('place',$this->place,true);
-		$criteria->compare('id_enterprise',$this->id_enterprise);
+		//$criteria->compare('id_enterprise',$this->id_enterprise);
                  //-------------------------------------------------------
-                $criteria->with= array('enterprise');
+        $criteria->with= array('enterprise');
 		$criteria->compare('enterprise.title',$this->enterprise_search,true);
                 //--------------------------------------------------------
                 $id=yii::app()->user->getEID();

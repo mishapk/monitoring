@@ -24,8 +24,10 @@ class WebUser extends CWebUser {
          }
      function getOID(){
               $num= $this->getEID();
+              if($num>0){
               $id=Object::model()->find('id_enterprise=:num',array(':num'=>$num));
               return $id->id;
+		  }else return 0;
          }      
     
     

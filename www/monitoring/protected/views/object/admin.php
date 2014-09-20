@@ -41,8 +41,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php
-    if(!Yii::app()->user->checkAccess('root')) 
-        $options='display:none'; 
+   
+    
     $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'object-grid',
 	'dataProvider'=>$model->search(),
@@ -55,7 +55,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
                 array('name'=>'enterprise_search','value'=>'$data->enterprise?$data->enterprise->title:"-"'),
 		array(
 			'class'=>'CButtonColumn',
-                        'deleteButtonOptions'=>array('style'=>$options),
+                        
 		),
 	),
 )); ?>

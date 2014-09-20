@@ -40,7 +40,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+	$options='';
+    if(!Yii::app()->user->checkAccess('root')) 
+        $options='display:none'; 
+	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'sensor-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -51,7 +55,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'place',
                 array('name'=>'stype_search','value'=>'$data->type?$data->type->title:"-"'),
                array('name'=>'objects_search','value'=>'$data->objects?$data->objects->title:"-"'),
-             //   array('name'=>'enterprise_search','value'=>'$data->objects->enterprise?$data->objects->enterprise->title:"-"'),
+               array('name'=>'enterprise_search','value'=>'$data->objects->enterprise?$data->objects->enterprise->title:"-"'),
 		/*'id_type',
 		'x_cord',
 		
@@ -61,6 +65,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		*/
 		array(
 			'class'=>'CButtonColumn',
+			'deleteButtonOptions'=>array('style'=>$options),
 		),
 	),
 )); ?>

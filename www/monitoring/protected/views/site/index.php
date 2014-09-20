@@ -18,7 +18,7 @@ echo 'hash=',CPasswordHelper::hashPassword('admin'),'<br>';
 $num= Yii::app()->user->getid();
   echo 'Num=',$num;
   $id=User::model()->find('id=:num',array(':num'=>$num));
-  echo'<br> id=', $id->enterprise_id;
+ // echo'<br> id=', $id->enterprise_id;
 ?>
 <p>For more details on how to further develop this application, please read
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.

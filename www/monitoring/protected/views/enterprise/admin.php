@@ -41,6 +41,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php 
+    $options='';
     if(!Yii::app()->user->checkAccess('root')) 
         $options='display:none'; 
     $this->widget('zii.widgets.grid.CGridView', array(
