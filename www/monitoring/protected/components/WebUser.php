@@ -28,7 +28,23 @@ class WebUser extends CWebUser {
               $id=Object::model()->find('id_enterprise=:num',array(':num'=>$num));
               return $id->id;
 		  }else return 0;
-         }      
+         }  
+          function getSID(){
+         /*     $num= $this->getOID();
+              if($num>0){
+              $id=Sensor::model()->find('id_object=:num',array(':num'=>$num));
+              return $id->id;
+		  }else return 0;
+		  */
+		   $num= $this->getOID();
+		   $criteria=new CDbCriteria();
+		   $criteria->with= array('enterprise');
+		   $criteria->compare('enterprise.id',$num);
+		   
+           $id=Sensor::model()->find($criteria);
+           
+              return $id->title;
+         }         
     
     
 }

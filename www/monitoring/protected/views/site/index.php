@@ -19,6 +19,14 @@ $num= Yii::app()->user->getid();
   echo 'Num=',$num;
   $id=User::model()->find('id=:num',array(':num'=>$num));
  // echo'<br> id=', $id->enterprise_id;
+ echo '<br>';
+ $num= 5;
+		   $criteria=new CDbCriteria();
+		   $criteria->compare('t.id',$num); 
+           $id=Sensor::model()->find($criteria);
+           
+           echo "<pre>";print_r($id->getAttributes());echo"</pre>";
+		echo 'enterprise->id',$id->enterprise->id;	
 ?>
 <p>For more details on how to further develop this application, please read
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.

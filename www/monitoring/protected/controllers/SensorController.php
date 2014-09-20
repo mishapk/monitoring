@@ -5,9 +5,14 @@ class SensorController extends Controller
         //-----------------------------------------------------------------------
            public function accessCompare($id)
          {
-            //Idea: Select Criteria
-            $idO=Yii::app()->user->getOID();	
-            if (($idO>0)&& ($idO!=$id)) 
+           //Ищем в БД по ID датчика его Enterprise.ID
+           $criteria=new CDbCriteria();
+		   $criteria->compare('t.id',$id); 
+           $id=Sensor::model()->find($criteria);
+           $num=$id?$id->enterprise->id:0;
+           $idE=Yii::app()->user->getEID();
+           //Берем У пользователя User.Enterprise_ID и сравниваем с Enterprise.ID датчика. 	
+            if (($idE>0)&& ($idE!=$num)) 
                 throw new CHttpException(403, 'Forbidden');
              }    
         //-----------------------------------------------------------------------	
