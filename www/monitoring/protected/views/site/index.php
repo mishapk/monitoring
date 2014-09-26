@@ -26,7 +26,10 @@ $num= Yii::app()->user->getid();
            $id=Sensor::model()->find($criteria);
            
            echo "<pre>";print_r($id->getAttributes());echo"</pre>";
-		echo 'enterprise->id',$id->enterprise->id;	
+		echo 'enterprise->id',$id->enterprise->id;
+echo  '<br>IP=',   Yii::app()->request->getUserHostAddress(); // ip
+ echo '<br>Agent=',Yii::app()->request->getUserAgent(); // user-agent
+ echo  '<br>Host=',Yii::app()->request->getUserHost(); // host name           
 ?>
 <p>For more details on how to further develop this application, please read
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.

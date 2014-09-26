@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 19 2014 г., 18:08
+-- Время создания: Сен 26 2014 г., 17:47
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -49,6 +49,64 @@ INSERT INTO `tbl_enterprise` (`id`, `title`, `address`, `info`, `e_lng`, `e_lat`
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `tbl_events`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `info` text NOT NULL,
+  `sensor_id` int(11) NOT NULL,
+  `level_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `raw_info` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sensor_id` (`sensor_id`),
+  KEY `level_id` (`level_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Дамп данных таблицы `tbl_events`
+--
+
+INSERT INTO `tbl_events` (`id`, `created`, `title`, `info`, `sensor_id`, `level_id`, `user_id`, `raw_info`) VALUES
+(4, '2014-09-26 13:48:45', '111', '111', 5, 1, 2, '111'),
+(5, '2014-09-26 13:58:39', '1111', '111', 3, 3, 2, ''),
+(6, '2014-09-26 17:46:34', 'Сработка на титане', 'Фиг', 5, 4, 2, '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tbl_level`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_level` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(16) NOT NULL,
+  `info` varchar(32) NOT NULL,
+  `level` int(11) NOT NULL,
+  `color` varchar(7) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `level` (`level`),
+  KEY `level_2` (`level`),
+  KEY `level_3` (`level`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `tbl_level`
+--
+
+INSERT INTO `tbl_level` (`id`, `title`, `info`, `level`, `color`) VALUES
+(1, 'Уровень 1', 'До кретический', 1, '#ff9900'),
+(2, 'Уровень 2', 'Критический', 2, '#ff0000'),
+(3, 'Отказ', 'Неисправность', 3, '#c0c0c0'),
+(4, 'Норма', 'Нормальная работа', 4, '#00ff00');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `tbl_objec`
 --
 
@@ -60,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `tbl_objec` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   KEY `id_enterprise` (`id_enterprise`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `tbl_objec`
@@ -70,7 +128,8 @@ INSERT INTO `tbl_objec` (`id`, `title`, `place`, `id_enterprise`) VALUES
 (3, 'Травилка', '', 2),
 (4, 'Травилка 2', '', 1),
 (5, 'АВК', 'Старое', 1),
-(6, 'Травилка ТТТ', 'Тиат', 3);
+(6, 'Травилка ТТТ', 'Тиат', 3),
+(7, 'Delphi', 'Delphi2', 1);
 
 -- --------------------------------------------------------
 
@@ -103,7 +162,7 @@ INSERT INTO `tbl_sensor` (`id`, `address`, `title`, `place`, `id_type`, `x_cord`
 (3, 1, '1', '1', 2, 1, 1, 1, 3),
 (4, 1, '1', '1', 1, 1, 1, 1, 4),
 (5, 11, 'ТЬ ЬТ', 'ффф', 1, 0, 0, 0, 6),
-(6, 10, 'Figg', 'sada', 3, 1, 1, 1, 6);
+(6, 10, 'Титан1', 'sada', 3, 1, 1, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -165,6 +224,14 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `enterprise_id`, 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `tbl_events`
+--
+ALTER TABLE `tbl_events`
+  ADD CONSTRAINT `tbl_events_ibfk_1` FOREIGN KEY (`level_id`) REFERENCES `tbl_level` (`id`),
+  ADD CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`),
+  ADD CONSTRAINT `tbl_events_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `tbl_objec`

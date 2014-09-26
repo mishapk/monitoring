@@ -80,9 +80,8 @@
                                 //Style: CController::createUrl('currentController/methodToCall')
                                 'update'=>'#'.CHtml::activeId($model,'id_object'), //selector to update
                                  //'data'=>'js:javascript statement' 
-                                //leave out the data key to pass all form values through
-<<<<<<< Updated upstream
-                                )));    
+                                //leave out the data key to pass all form values through Updated upstream
+                                )));   
                       ?>
 		<?php echo $form->error($model,'id_enterprise'); ?>
 	</div>
@@ -96,18 +95,6 @@
                       echo $form->dropDownList($model,'id_object',$a_lookup,
                               array(
                               'options' => array($num=>array('selected'=>true))) ); ?>
-=======
-                                ))); 
-                 
-                      ?>
-		<?php echo $form->error($model,'id_enterprise'); ?>
-	</div>
-     //-----------------------------------------------------------------------------------------  
-       
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_object'); ?>
-		<?php echo $form->dropDownList($model,'id_object',array());  ?>
->>>>>>> Stashed changes
 		<?php echo $form->error($model,'id_object'); ?>
 	</div>
 

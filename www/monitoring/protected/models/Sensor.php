@@ -34,6 +34,13 @@ class Sensor extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
+          public function getSensors()
+       {
+            
+           $res=array();
+            $res=array('' => 'Select')+CHtml::listData(Sensor::model()->findAll(),'id','title');
+            return $res;  
+       }
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
