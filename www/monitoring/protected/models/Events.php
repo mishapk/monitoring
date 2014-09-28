@@ -29,6 +29,12 @@ class Events extends CActiveRecord
 		return 'tbl_events';
 	}
 //--------------------------------------------------------------------------
+		public $enterprise_search;
+		public $object_search;
+		public $sensor_search;
+		public $stype_search; 	
+        public $level_search;	
+//--------------------------------------------------------------------------
         public function beforeSave() {
             if(parent::beforeSave())
             {
@@ -49,12 +55,12 @@ class Events extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title,info, sensor_id, level_id', 'required'),
+			array(' sensor_id, level_id', 'required'),
 			array('sensor_id, level_id, user_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, created, title, info, sensor_id, level_id, user_id, raw_info', 'safe', 'on'=>'search'),
+			array('id, created, title, info, sensor_id, level_id, user_id, raw_info, enterprise_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,7 +75,7 @@ class Events extends CActiveRecord
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 			'level' => array(self::BELONGS_TO, 'Level', 'level_id'),
 			'sensor' => array(self::BELONGS_TO, 'Sensor', 'sensor_id'),
-                        'object'=>array(self::HAS_ONE,'Object',
+            'object'=>array(self::HAS_ONE,'Object',
 					array('id_object'=>'id'),'through'=>'sensor'),
                         'enterprise'=>array(self::HAS_ONE,'Enterprise',
 					array('id_enterprise'=>'id'),'through'=>'object'),                
@@ -93,6 +99,7 @@ class Events extends CActiveRecord
                         'enterprise' => 'Enterprise',
                         'object' => 'Object',
                         'id_enterprise'=>'Enterprise',
+             'enterprise_search' => 'Enterprise',
 		);
 	}
 
@@ -122,7 +129,10 @@ class Events extends CActiveRecord
 		$criteria->compare('level_id',$this->level_id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('raw_info',$this->raw_info,true);
-
+		$criteria->with= array('enterprise');
+		$criteria->compare('enterprise.title',$this->enterprise_search,true);
+		$id=yii::app()->user->getEID();
+                if($id>0) $criteria->condition='id_enterprise='.$id;
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

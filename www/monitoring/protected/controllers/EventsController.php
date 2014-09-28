@@ -124,7 +124,14 @@ class EventsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Events');
+		$criteria = new CDbCriteria();
+		$id=yii::app()->user->getEID();
+		if($id>0){
+		$criteria->with=array('enterprise');
+		$criteria->condition='id_enterprise='.$id;
+		}
+		$dataProvider=new CActiveDataProvider('Events',
+		array('criteria'=>$criteria));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

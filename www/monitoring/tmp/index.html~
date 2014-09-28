@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Test Form</title>
+</head>
+<body>
+<h1>Request input Form</h1>	
+	<form id="Login-form" action="login.php" method="post">
+		<input name="LoginForm[username]"  type="text" />   <br>
+		<input name="LoginForm[password]"  type="password" /><br>
+		<input type="submit" name="yt0" value="Login" />
+	</form>
+</body>
+</html>

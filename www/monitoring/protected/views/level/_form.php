@@ -38,8 +38,7 @@
 	</div>
         <div class="row">
 		<?php echo $form->labelEx($model,'color'); ?>
-		<?php// echo $form->textField($model,'color'); ?>
-                <?php  $this->widget('ext.colorpicker.ColorPicker', array('model' => $model,'attribute' => 'color', ));?>
+        <?php  $this->widget('ext.colorpicker.ColorPicker', array('model' => $model,'attribute' => 'color', ));?>
 		<?php echo $form->error($model,'color'); ?>
 	</div>
         

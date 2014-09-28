@@ -8,7 +8,7 @@
 class UserIdentity extends CUserIdentity
 {
     private $_id;
- 
+	private $_LastLoginTime;
     public function authenticate()
     {
         $username=strtolower($this->username);
@@ -20,7 +20,9 @@ class UserIdentity extends CUserIdentity
         else
         {
             $this->_id=$user->id;
+            $this->_LastLoginTime = $user->lastLoginTime;
             $this->username=$user->username;
+            $this->setState('lastLoginTime', $user->lastLoginTime);
             $this->errorCode=self::ERROR_NONE;
         }
         return $this->errorCode==self::ERROR_NONE;

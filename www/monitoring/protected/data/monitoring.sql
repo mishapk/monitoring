@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1
--- Время создания: Сен 26 2014 г., 17:47
--- Версия сервера: 5.5.25
--- Версия PHP: 5.3.13
+-- Хост: localhost
+-- Время создания: Сен 28 2014 г., 19:39
+-- Версия сервера: 5.5.38
+-- Версия PHP: 5.3.10-1ubuntu3.14
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,22 +59,28 @@ CREATE TABLE IF NOT EXISTS `tbl_events` (
   `info` text NOT NULL,
   `sensor_id` int(11) NOT NULL,
   `level_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
   `raw_info` text NOT NULL,
+  `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `sensor_id` (`sensor_id`),
   KEY `level_id` (`level_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Дамп данных таблицы `tbl_events`
 --
 
-INSERT INTO `tbl_events` (`id`, `created`, `title`, `info`, `sensor_id`, `level_id`, `user_id`, `raw_info`) VALUES
-(4, '2014-09-26 13:48:45', '111', '111', 5, 1, 2, '111'),
-(5, '2014-09-26 13:58:39', '1111', '111', 3, 3, 2, ''),
-(6, '2014-09-26 17:46:34', 'Сработка на титане', 'Фиг', 5, 4, 2, '');
+INSERT INTO `tbl_events` (`id`, `created`, `title`, `info`, `sensor_id`, `level_id`, `raw_info`, `user_id`) VALUES
+(4, '2014-09-26 13:48:45', '111', '111', 5, 1, '111', 2),
+(5, '2014-09-26 13:58:39', '1111', '111', 3, 3, '', 2),
+(6, '2014-09-26 17:46:34', 'Сработка на титане', 'Фиг', 5, 4, '', 2),
+(7, '2014-09-28 11:50:54', '', '', 5, 1, '', 2),
+(8, '2014-09-28 11:52:29', '', '', 5, 1, '', 2),
+(9, '2014-09-28 11:56:57', '', '', 5, 1, '', 2),
+(10, '2014-09-28 13:03:57', '', '', 5, 1, '', 2),
+(11, '2014-09-28 13:04:04', '', '', 5, 1, '', 2),
+(12, '2014-09-28 13:08:43', '', '', 5, 1, '', 2);
 
 -- --------------------------------------------------------
 
@@ -201,8 +207,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
-  `enterprise_id` int(11) NOT NULL,
+  `enterprise_id` int(11) DEFAULT NULL,
   `role` varchar(20) NOT NULL,
+  `lastLoginTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   KEY `enterprise_id` (`enterprise_id`)
@@ -212,14 +219,14 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 -- Дамп данных таблицы `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `enterprise_id`, `role`) VALUES
-(1, 'admin', '$2a$13$aoktYifNWSm6m4Hod3pJGe9s1QYOxhWbucZEIWiMNudCxnLq1V62K', 'admin@mail.ru', 3, 'admin'),
-(2, 'user1', '$2a$13$L1EPZNxOeilL2N7/5CFDY.WG/0RijLHzHHtbJZe9qIct7i0Ka2OhG', 'user1@mail.ru', 0, 'root'),
-(3, 'user2', '$2a$13$s5ua.Oc3KG/wgZsn21J6A.kWOYv/az9rXivobI0i6l1F03yE/Lf0C', 'user@mail.ru', 2, 'user'),
-(5, 'user3', '$2a$13$C6BwvqE3bkm/t2khxIkq8.Gikc6n2dp4v8w6U8pgCfjaO0Pw9C/GG', '1234', 0, 'user'),
-(6, 'sadasd', '$2a$13$ARrI/c.RoTlLfUzq4N8yH.VknB7qV6RUQvghHkfJiwk4nAEeYn9uq', 'asdas@mail.ru', 2, 'admin'),
-(7, 'asdasd', '$2a$13$CmrW3lAGjFg5UXi75xKWS.MNPBdJ8O5gQVIlL9psFZWCEkz06rrNO', 'asdsa', 0, 'user'),
-(9, 'demo', '$2a$13$jvH2j8HxSoWxk05aTXfLC.w3TIu1kcIlc0CywyYMFxrgfFa4SyKge', '1234@mail.ru', 0, 'root');
+INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`, `enterprise_id`, `role`, `lastLoginTime`) VALUES
+(1, 'admin', '$2a$13$aoktYifNWSm6m4Hod3pJGe9s1QYOxhWbucZEIWiMNudCxnLq1V62K', 'admin@mail.ru', 3, 'admin', '0000-00-00 00:00:00'),
+(2, 'user1', '$2a$13$L1EPZNxOeilL2N7/5CFDY.WG/0RijLHzHHtbJZe9qIct7i0Ka2OhG', 'user1@mail.ru', 0, 'root', '2014-09-28 16:22:20'),
+(3, 'user2', '$2a$13$s5ua.Oc3KG/wgZsn21J6A.kWOYv/az9rXivobI0i6l1F03yE/Lf0C', 'user@mail.ru', 2, 'user', '0000-00-00 00:00:00'),
+(5, 'user3', '$2a$13$C6BwvqE3bkm/t2khxIkq8.Gikc6n2dp4v8w6U8pgCfjaO0Pw9C/GG', '1234', NULL, 'user', '0000-00-00 00:00:00'),
+(6, 'sadasd', '$2a$13$ARrI/c.RoTlLfUzq4N8yH.VknB7qV6RUQvghHkfJiwk4nAEeYn9uq', 'asdas@mail.ru', 2, 'admin', '0000-00-00 00:00:00'),
+(7, 'asdasd', '$2a$13$CmrW3lAGjFg5UXi75xKWS.MNPBdJ8O5gQVIlL9psFZWCEkz06rrNO', 'asdsa', NULL, 'user', '0000-00-00 00:00:00'),
+(9, 'demo', '$2a$13$jvH2j8HxSoWxk05aTXfLC.w3TIu1kcIlc0CywyYMFxrgfFa4SyKge', '1234@mail.ru', NULL, 'root', '0000-00-00 00:00:00');
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

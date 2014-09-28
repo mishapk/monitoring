@@ -50,6 +50,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'title',
 		'info',
 		'sensor_id',
+		array('name'=>'object_search','value'=>'$data->object?$data->object->title:"-"'),
+		array('name'=>'enterprise_search','value'=>'$data->object->enterprise?$data->object->enterprise->title:"-"'),
 		/*
 		'level_id',
 		'user_id',

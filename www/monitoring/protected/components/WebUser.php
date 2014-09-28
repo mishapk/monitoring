@@ -46,6 +46,16 @@ class WebUser extends CWebUser {
               return $id->title;
          }         
     
-    
+    public function afterLogin()
+    {
+        if (parent::beforeLogout()) {
+            $user = User::model()->findByPk(Yii::app()->user->id);
+            $user->lastLoginTime=date('Y-m-d H:i:s');
+            $user->saveAttributes(array('lastLoginTime'));
+            return true;
+        } else {
+            return false;
+        }
+    } 
 }
 ?>

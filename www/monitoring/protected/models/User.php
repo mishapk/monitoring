@@ -61,6 +61,7 @@ class User extends CActiveRecord
 			array('username', 'unique','allowEmpty'=>false),
                         array('email','email'),
                         array('new_password','length','min'=>6, 'allowEmpty'=>true),
+                        array('new_password','length','min'=>6, 'allowEmpty'=>true),
                         array('enterprise_id', 'numerical', 'integerOnly'=>true),
 			array('username, new_password, email, role', 'length', 'max'=>128),
 			array('new_confirm', 'compare', 'compareAttribute'=>'new_password'),
@@ -97,7 +98,8 @@ class User extends CActiveRecord
 			'email' => 'Email',
 			'enterprise_id' => 'Enterprise',
 			'role' => 'Role',
-                        'enterprise_search' => 'Enterprise',
+			'enterprise_search' => 'Enterprise',
+			'lastLoginTime'=>'LastLoginTime',
 		);
 	}
 

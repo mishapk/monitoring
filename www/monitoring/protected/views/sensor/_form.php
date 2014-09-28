@@ -64,13 +64,13 @@
 		<?php echo $form->textField($model,'state'); ?>
 		<?php echo $form->error($model,'state'); ?>
 	</div>
-      <?php//------------------------------------------------------------------------------?>
+      
        <div class="row">
 		<?php echo $form->labelEx($model,'id_enterprise'); ?>
 		<?php 
                  $num=$model->id_object;  
                  $object=  Object::model()->find('id=:num',array(':num'=>$num));
-                 $def=$object->id_enterprise; 
+                 $def=$object!=null?$object->id_enterprise:0; 
                       echo CHtml::dropDownList('id_enterprise','',Enterprise::getEnterprises(),
                               array(
                               'options' => array($def=>array('selected'=>true)),    
@@ -85,7 +85,7 @@
                       ?>
 		<?php echo $form->error($model,'id_enterprise'); ?>
 	</div>
-      <?php//------------------------------------------------------------------------------?>
+     
         <div class="row">
 		<?php echo $form->labelEx($model,'id_object'); ?>
 		<?php 

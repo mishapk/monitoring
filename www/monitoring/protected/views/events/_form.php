@@ -36,9 +36,11 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'enterprise'); ?>
 		<?php
-                      $num=$model->sensor->object->enterprise_id; 
+                      
+                      $num=$model->sensor->id_object; 
+                      
                       $object=  Object::model()->find('id=:num',array(':num'=>$num));
-                      $def=$object->id_enterprise; 
+                      $def=isset($obect)?$object->id_enterprise:null; 
                            echo CHtml::dropDownList('id_enterprise','',Enterprise::getEnterprises(),
                               array(
                               'options' => array($def=>array('selected'=>true)),    
@@ -56,9 +58,9 @@
                     $a_lookup=array(''=>'Select Enterprise');
                 if( isset($def)) 
                      $a_lookup=array('' => 'Select')+CHtml::listData(Object::model()->findAll('id_enterprise=:num',array(':num'=>$def)),'id','title');
-                     $num=$model->sensor->object_id; 
+                     $num=$model->sensor->id_object; 
                       $sensor=  Sensor::model()->find('id=:num',array(':num'=>$num));
-                      $def=$sensor->object_id;  
+                      $def=$sensor->id_object;  
                         echo $form->dropDownList($model,'object',$a_lookup,
                                array(
                               'options' => array($def=>array('selected'=>true)),    
@@ -78,7 +80,7 @@
 		<?php 
                     $a_lookup=array(''=>'Select object');
                      if( isset($def)) 
-                     $a_lookup=array('' => 'Select')+CHtml::listData(Sensor::model()->findAll('object_id=:num',array(':num'=>$def)),'id','title');
+                     $a_lookup=array('' => 'Select')+CHtml::listData(Sensor::model()->findAll('id_object=:num',array(':num'=>$def)),'id','title');
                     echo $form->dropDownList($model,'sensor_id',$a_lookup); ?>
 		<?php echo $form->error($model,'sensor_id'); ?>
 	</div>

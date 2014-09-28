@@ -47,7 +47,7 @@
                      $a_lookup=array();
                      $a_lookup=CHtml::listData(Enterprise::model()->findAll(),'id','title');  
                      $a_lookup['0']='Все';
-                     $a_lookup=array('' => '')+$a_lookup;
+                     $a_lookup=array('' => 'Select')+$a_lookup;
                      echo $form->dropDownList($model,'enterprise_id',$a_lookup); ?>
 		<?php echo $form->error($model,'enterprise_id'); ?>
 	</div>
