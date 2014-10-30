@@ -89,10 +89,14 @@
         <div class="row">
 		<?php echo $form->labelEx($model,'id_object'); ?>
 		<?php 
+                    $num=Yii::app()->user->getEID(); 
                      $a_lookup=array(''=>'Select Enterprise');
                    if( isset($def)) 
-                     $a_lookup=array('' => 'Select')+CHtml::listData(Object::model()->findAll('id_enterprise=:num',array(':num'=>$def)),'id','title');
-                      echo $form->dropDownList($model,'id_object',$a_lookup,
+                       $a_lookup=$num==0?array('' => 'Select')+CHtml::listData(Object::model()->findAll('id_enterprise=:num',array(':num'=>$def)),'id','title'):
+                        CHtml::listData(Object::model()->findAll('id_enterprise=:num',array(':num'=>$num)),'id','title');
+                  
+                       
+                     echo $form->dropDownList($model,'id_object',$a_lookup,
                               array(
                               'options' => array($num=>array('selected'=>true))) ); ?>
 		<?php echo $form->error($model,'id_object'); ?>

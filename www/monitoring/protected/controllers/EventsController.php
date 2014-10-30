@@ -31,15 +31,22 @@ class EventsController extends Controller
 				'actions'=>array('index','view','admin'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update'),
-				//'users'=>array('@'),
-                                'roles'=>array('admin'), 
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','create'),
+			
+                        array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('create'),
+				//'users'=>array('admin'),
+                               'roles'=>array('device'), 
+			),    
+                    
+                          array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('delete'),
 				//'users'=>array('admin'),
                                'roles'=>array('admin'), 
+			),        
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('delete','create','update'),
+				//'users'=>array('admin'),
+                               'roles'=>array('root'), 
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),

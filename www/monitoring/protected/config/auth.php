@@ -6,11 +6,20 @@ return array(
         'bizRule' => null,
         'data' => null
     ),
+     'device' => array(
+        'type' => CAuthItem::TYPE_ROLE,
+        'description' => 'Device',
+        'children' => array(
+            'guest', // унаследуемся от гостя
+        ),
+        'bizRule' => null,
+        'data' => null
+    ),
     'user' => array(
         'type' => CAuthItem::TYPE_ROLE,
         'description' => 'User',
         'children' => array(
-            'guest', // унаследуемся от гостя
+            'device', // унаследуемся от гостя
         ),
         'bizRule' => null,
         'data' => null

@@ -28,12 +28,12 @@
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
+			'items'=>array( // 'visible'=>!Yii::app()->user->isGuest
 				array('label'=>'Home', 'url'=>array('/site/index')),
-                                array('label'=>'Events', 'url'=>array('/events/index'),'active' => Yii::app()->controller->getId() == 'events','visible'=>!Yii::app()->user->isGuest),
-                                array('label'=>'Enterprises', 'url'=>array('/enterprise/index'),'active' => Yii::app()->controller->getId() == 'enterprise','visible'=>!Yii::app()->user->isGuest),
-                                array('label'=>'Objects', 'url'=>array('/object/index'),'active' => Yii::app()->controller->getId() == 'object','visible'=>!Yii::app()->user->isGuest),
-                                array('label'=>'Sensors', 'url'=>array('/sensor/index'),'active' => Yii::app()->controller->getId() == 'sensor','visible'=>!Yii::app()->user->isGuest),
+                                array('label'=>'Events', 'url'=>array('/events/index'),'active' => Yii::app()->controller->getId() == 'events','visible'=>Yii::app()->user->checkAccess('user')),
+                                array('label'=>'Enterprises', 'url'=>array('/enterprise/index'),'active' => Yii::app()->controller->getId() == 'enterprise','visible'=>Yii::app()->user->checkAccess('user')),
+                                array('label'=>'Objects', 'url'=>array('/object/index'),'active' => Yii::app()->controller->getId() == 'object','visible'=>Yii::app()->user->checkAccess('user')),
+                                array('label'=>'Sensors', 'url'=>array('/sensor/index'),'active' => Yii::app()->controller->getId() == 'sensor','visible'=>Yii::app()->user->checkAccess('user')),
                                 array('label'=>'Sensor Type', 'url'=>array('/stype/index'),'active' => Yii::app()->controller->getId() == 'stype','visible'=>Yii::app()->user->checkAccess('root')),
                                 array('label'=>'Levels', 'url'=>array('/level/index'),'active' => Yii::app()->controller->getId() == 'level','visible'=>Yii::app()->user->checkAccess('root')),
                                 array('label'=>'Users', 'url'=>array('/user/index'),'active' => Yii::app()->controller->getId() == 'user','visible'=>Yii::app()->user->checkAccess('root')),

@@ -21,7 +21,10 @@ class Enterprise extends CActiveRecord
        {
             
            $res=array();
-            $res=array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title');
+           $num=Yii::app()->user->getEID();
+           $res=$num==0?array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title'):
+                CHtml::listData(Enterprise::model()->findAll('id=:num',array(':num'=>$num)),'id','title'); 
+          //  $res=array('' => 'Select')+CHtml::listData(Enterprise::model()->findAll(),'id','title');
             return $res;  
        }        
 	public function tableName()

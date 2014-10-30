@@ -46,7 +46,7 @@ class Sensor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('address, title, place, id_type, x_cord, y_cord, state', 'required'),
+			array('address, title, place, id_type', 'required'),
 			array('address, id_type, x_cord, y_cord, state, id_object', 'numerical', 'integerOnly'=>true),
 			array('title, place', 'length', 'max'=>64),
 			// The following rule is used by search().
