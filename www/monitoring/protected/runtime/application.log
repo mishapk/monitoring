@@ -4704,3 +4704,1193 @@ Stack trace:
 REQUEST_URI=/monitoring/index.php?r=events/update&id=4
 HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
 ---
+2014/10/31 10:38:31 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.id_object".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_object')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_object')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'id_object')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'id_object', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'id_object', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField(Object(Events), 'id_object', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:41:08 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.id_object".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_object')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_object')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'id_object')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'id_object', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'id_object', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField(Object(Events), 'id_object', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:41:12 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.id_object".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_object')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_object')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'id_object')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'id_object', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'id_object', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField(Object(Events), 'id_object', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:43:57 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.addr_sensor".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('addr_sensor')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('addr_sensor')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'addr_sensor')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'addr_sensor', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'addr_sensor', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(30): CActiveForm->textField(Object(Events), 'addr_sensor', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:45:24 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.addr_sensor".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('addr_sensor')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('addr_sensor')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'addr_sensor')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'addr_sensor', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'addr_sensor', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(30): CActiveForm->textField(Object(Events), 'addr_sensor', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:53:31 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.address".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('address')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('address')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'address')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'address', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'address', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(30): CActiveForm->textField(Object(Events), 'address', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:56:19 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.address".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('address')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('address')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'address')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'address', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'address', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(30): CActiveForm->textField(Object(Events), 'address', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 10:59:09 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.senor".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('senor')
+#1 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(30): CActiveRecord->__get('senor')
+#2 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#3 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#4 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(88): CController->render('create', Array)
+#11 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#12 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#21 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#22 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
+---
+2014/10/31 11:13:40 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:13:40 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:22 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:22 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:22 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(82): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 11:14:34 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:34 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:34 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:14:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(82): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 11:18:32 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:18:32 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:18:32 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:18:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(82): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 11:24:34 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:24:34 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:24:34 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:24:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`user_id`, `created`) VALUES (:yp0, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(82): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 11:47:57 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:47:57 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:48:27 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:48:27 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:50:30 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:50:30 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:51:26 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:51:26 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:52:39 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:52:39 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:54:57 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:54:57 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:42 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:42 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:44 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:44 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:47 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:47 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:50 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 11:59:50 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:03:43 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:03:43 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:41:24 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:41:24 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:41:32 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:41:32 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:43:19 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.object".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('object')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('object')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'object')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'object', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'object', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField(Object(Events), 'object', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(92): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/index
+---
+2014/10/31 12:43:46 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Events.object".' in X:\home\monitoring.git\www\framework\base\CComponent.php:130
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('object')
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('object')
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Events), 'object')
+#3 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Events), 'object', Array)
+#4 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Events), 'object', Array)
+#5 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField(Object(Events), 'object', Array)
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#7 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#8 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#9 X:\home\monitoring.git\www\monitoring\protected\views\events\create.php(18): CController->renderPartial('_form', Array)
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require('X:\home\monitor...')
+#11 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('X:\home\monitor...', Array, true)
+#12 X:\home\monitoring.git\www\framework\web\CController.php(869): CBaseController->renderFile('X:\home\monitor...', Array, true)
+#13 X:\home\monitoring.git\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(92): CController->render('create', Array)
+#15 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#16 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#26 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/index
+---
+2014/10/31 12:45:37 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:45:37 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:47:15 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:47:15 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:26 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:26 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:32 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:32 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:32 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:47 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:47 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:48:47 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (81)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:41 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:41 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:41 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:43 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:43 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:43 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:58 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:58 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:50:58 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (82)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:36 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:36 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:36 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:40 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:40 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:52:40 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:53:12 [warning] [application] Не удалось присвоить небезопасный атрибут "object" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:53:12 [warning] [application] Не удалось присвоить небезопасный атрибут "sensor" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 12:53:12 [warning] [application] Не удалось присвоить небезопасный атрибут "raw_info" класса "Events".
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (83)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 13:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in X:\home\monitoring.git\www\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('code')
+#5 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/code')
+#6 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/monitoring/index.php?r=gii/crud/code&id=1
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=gii/crud/index
+---
+2014/10/31 13:26:03 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.0".' in X:\home\monitoring.git\www\framework\base\CComponent.php:173
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'id_object=:num')
+#1 X:\home\monitoring.git\www\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1455): CDbCommandBuilder->createCriteria(Array, Array)
+#3 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(85): CActiveRecord->find(Array, Array)
+#4 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#5 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#12 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#14 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#15 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 13:27:46 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.0".' in X:\home\monitoring.git\www\framework\base\CComponent.php:173
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'id_object=:num')
+#1 X:\home\monitoring.git\www\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1455): CDbCommandBuilder->createCriteria(Array, Array)
+#3 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(86): CActiveRecord->find(Array, Array)
+#4 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#5 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#12 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#14 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#15 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 13:28:47 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.0".' in X:\home\monitoring.git\www\framework\base\CComponent.php:173
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'id_object=:num')
+#1 X:\home\monitoring.git\www\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1455): CDbCommandBuilder->createCriteria(Array, Array)
+#3 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(86): CActiveRecord->find(Array, Array)
+#4 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#5 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#12 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#14 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#15 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 13:57:46 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (94)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 13:57:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(94): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:03:20 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (94)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 14:03:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(94): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:05:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (91)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 14:05:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(91): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:05:32 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). Выполнявшийся SQL-запрос: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW()).
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (91)
+in X:\home\monitoring.git\www\monitoring\index.php (13)
+2014/10/31 14:05:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoring`.`tbl_events`, CONSTRAINT `tbl_events_ibfk_2` FOREIGN KEY (`sensor_id`) REFERENCES `tbl_sensor` (`id`)). The SQL statement executed was: INSERT INTO `tbl_events` (`raw_info`, `user_id`, `created`) VALUES (:yp0, :yp1, NOW())' in X:\home\monitoring.git\www\framework\db\CDbCommand.php:358
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 X:\home\monitoring.git\www\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(91): CActiveRecord->save()
+#3 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#14 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:05:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:07:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:07:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/10/31 14:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:27:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:31:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:44:29 [error] [exception.CHttpException.34] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:45:55 [error] [exception.CHttpException.34] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:46:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:47:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:49:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 14:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 15:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/10/31 15:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/11/10 14:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "gii/default/login".' in X:\home\monitoring.git\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#1 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/monitoring/index.php?r=gii/default/login
+---

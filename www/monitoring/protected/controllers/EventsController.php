@@ -78,7 +78,17 @@ class EventsController extends Controller
 
 		if(isset($_POST['Events']))
 		{
-			$model->attributes=$_POST['Events'];
+			$ps=$_POST['Events'];
+                        
+                        //$model->attributes=$ps;
+                        $model->raw_info=$ps[raw_info];
+                        $ids=Sensor::model()->findByAttributes(array('id_object'=>$ps['object'],'address'=>$ps['sensor']['address']));
+                        if (!($ids->id>0))throw new CHttpException(404, 'SNF:Sensor no found');
+                        $model->sensor_id=$ids->id;
+                        $idl= Level::model()->findByAttributes(array('level'=>$ps['sensor']['level']));
+                        if (!($idl->id>0))throw new CHttpException(404, 'LNF:Level no found');
+                        $model->level_id=$idl->id;
+              
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

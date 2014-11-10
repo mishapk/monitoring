@@ -35,12 +35,15 @@ class Events extends CActiveRecord
 		public $stype_search; 	
         public $level_search;	
 //--------------------------------------------------------------------------
+        
         public function beforeSave() {
             if(parent::beforeSave())
             {
                 if($this->isNewRecord){
                     $this->user_id = Yii::app()->user->id;
                     $this->created = new CDbExpression('NOW()');
+                  //  $this->level_id=
+                            
                 }
                 return true;
             }   else
@@ -55,7 +58,7 @@ class Events extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(' sensor_id, level_id', 'required'),
+			array(' ', 'required'),
 			array('sensor_id, level_id, user_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
 			// The following rule is used by search().
@@ -75,7 +78,7 @@ class Events extends CActiveRecord
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 			'level' => array(self::BELONGS_TO, 'Level', 'level_id'),
 			'sensor' => array(self::BELONGS_TO, 'Sensor', 'sensor_id'),
-            'object'=>array(self::HAS_ONE,'Object',
+                         'object'=>array(self::HAS_ONE,'Object',
 					array('id_object'=>'id'),'through'=>'sensor'),
                         'enterprise'=>array(self::HAS_ONE,'Enterprise',
 					array('id_enterprise'=>'id'),'through'=>'object'),                
@@ -92,6 +95,7 @@ class Events extends CActiveRecord
 			'created' => 'Created',
 			'title' => 'Title',
 			'info' => 'Info',
+                        'address'=>'Sensor Address',
 			'sensor_id' => 'Sensor',
 			'level_id' => 'Level',
 			'user_id' => 'User',
