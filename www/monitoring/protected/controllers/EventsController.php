@@ -81,7 +81,7 @@ class EventsController extends Controller
 			$ps=$_POST['Events'];
                         
                         //$model->attributes=$ps;
-                        $model->raw_info=$ps[raw_info];
+                        $model->raw_info=$ps['raw_info'];
                         $ids=Sensor::model()->findByAttributes(array('id_object'=>$ps['object'],'address'=>$ps['sensor']['address']));
                         if (!($ids->id>0))throw new CHttpException(404, 'SNF:Sensor no found');
                         $model->sensor_id=$ids->id;
@@ -142,13 +142,20 @@ class EventsController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria();
+
 		$id=yii::app()->user->getEID();
 		if($id>0){
 		$criteria->with=array('enterprise');
 		$criteria->condition='id_enterprise='.$id;
 		}
 		$dataProvider=new CActiveDataProvider('Events',
-		array('criteria'=>$criteria));
+		array('criteria'=>$criteria,
+                'pagination'=>array(
+                    'pageSize'=>5,
+                    'pageVar'=>'page'),
+                )        
+                        );
+                $dataProvider->sort->defaultOrder='t.id DESC';
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -163,7 +170,7 @@ class EventsController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Events']))
 			$model->attributes=$_GET['Events'];
-
+                $model->dbCriteria->order='t.id DESC';
 		$this->render('admin',array(
 			'model'=>$model,
 		));

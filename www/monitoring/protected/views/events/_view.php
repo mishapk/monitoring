@@ -39,12 +39,12 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
 	<?php echo CHtml::encode($data->user->username); ?>
 	<br />
-	<?php 
-	/*
+	
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('raw_info')); ?>:</b>
 	<?php echo CHtml::encode($data->raw_info); ?>
 	<br />
 
-	*/ ?>
+	 
 
 </div>

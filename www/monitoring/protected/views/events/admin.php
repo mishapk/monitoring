@@ -39,7 +39,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-
+<?php 
+function get($data)
+{
+    if($data->level_id==1)return $data->stype->p1;
+    if($data->level_id==2)return $data->stype->p2;
+    if($data->level_id==3)return $data->stype->p3;
+    if($data->level_id==4)return $data->stype->p4;
+    
+}
+?>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'events-grid',
 	'dataProvider'=>$model->search(),
@@ -47,15 +56,21 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'created',
-		'title',
-		'info',
-		'sensor_id',
-		array('name'=>'object_search','value'=>'$data->object?$data->object->title:"-"'),
-		array('name'=>'enterprise_search','value'=>'$data->object->enterprise?$data->object->enterprise->title:"-"'),
+                array('name'=>'enterprise_search','value'=>'$data->object->enterprise?$data->object->enterprise->title:"-"'),
+                array('name'=>'object_search','value'=>'$data->object?$data->object->title:"-"'),
+               array('name'=>'sensor_id','type'=>'raw','value'=>'get($data)'),
+                array('name'=>'sensor_place','value'=>'$data->sensor?$data->sensor->place:"-"'),
+                array('name'=>'stype_search','value'=>'$data->stype?$data->stype->title:"-"'),
+                array('name'=>'level_search','value'=>'$data->level?$data->level->title:"-"'),
+	//	'title',
+	//	'info',
+	//	'sensor_id',
+		'raw_info',
+		
 		/*
 		'level_id',
 		'user_id',
-		'raw_info',
+		
 		*/
 		array(
 			'class'=>'CButtonColumn',

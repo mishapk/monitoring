@@ -8,6 +8,11 @@
  * @property string $title
  * @property string $info
  * @property string $svg
+ * @property string $p1
+ * @property string $p2
+ * @property string $p3
+ * @property string $p4
+ * 
  *
  * The followings are the available model relations:
  * @property TblSensor[] $tblSensors
@@ -30,7 +35,7 @@ class Stype extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, info, svg', 'required'),
+			array('title, info,p1,p2,p3,p4', 'required'),
 			array('title, info', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -60,6 +65,10 @@ class Stype extends CActiveRecord
 			'title' => 'Title',
 			'info' => 'Info',
 			'svg' => 'Svg',
+                        'p1'=>'Level I',
+                        'p2'=>'Level II',
+                        'p3'=>'Trable',
+                        'p4'=>'Normal',
 		);
 	}
 

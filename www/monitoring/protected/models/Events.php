@@ -33,7 +33,8 @@ class Events extends CActiveRecord
 		public $object_search;
 		public $sensor_search;
 		public $stype_search; 	
-        public $level_search;	
+                public $level_search;
+                public $sensor_place;
 //--------------------------------------------------------------------------
         
         public function beforeSave() {
@@ -63,7 +64,7 @@ class Events extends CActiveRecord
 			array('title', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, created, title, info, sensor_id, level_id, user_id, raw_info, enterprise_search', 'safe', 'on'=>'search'),
+			array('id, created, title, info, sensor_id, level_id, user_id, raw_info, enterprise_search, sensor_place,stype_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,7 +82,10 @@ class Events extends CActiveRecord
                          'object'=>array(self::HAS_ONE,'Object',
 					array('id_object'=>'id'),'through'=>'sensor'),
                         'enterprise'=>array(self::HAS_ONE,'Enterprise',
-					array('id_enterprise'=>'id'),'through'=>'object'),                
+					array('id_enterprise'=>'id'),'through'=>'object'), 
+                        'stype'=>array(self::HAS_ONE,'SType',
+                                        array('id_type'=>'id'),'through'=>'sensor'),
+                        
 		);
 	}
 
@@ -103,7 +107,10 @@ class Events extends CActiveRecord
                         'enterprise' => 'Enterprise',
                         'object' => 'Object',
                         'id_enterprise'=>'Enterprise',
-             'enterprise_search' => 'Enterprise',
+                        'enterprise_search' => 'Enterprise',
+                        'stype_search'=>'SensorType',
+                        'sensor_place'=>'Place',
+                        'level_search'=>'Level',
 		);
 	}
 

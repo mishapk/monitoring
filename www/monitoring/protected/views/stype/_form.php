@@ -36,6 +36,28 @@
 		<?php echo $form->textArea($model,'svg',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'svg'); ?>
 	</div>
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'p1'); ?>
+		<?php echo $form->textArea($model,'p1',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'p1'); ?>
+	</div>
+        
+                <div class="row">
+		<?php echo $form->labelEx($model,'p2'); ?>
+		<?php echo $form->textArea($model,'p2',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'p2'); ?>
+	</div>
+                <div class="row">
+		<?php echo $form->labelEx($model,'p3'); ?>
+		<?php echo $form->textArea($model,'p3',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'p3'); ?>
+	</div>
+                <div class="row">
+		<?php echo $form->labelEx($model,'p4'); ?>
+		<?php echo $form->textArea($model,'p4',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'p4'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
