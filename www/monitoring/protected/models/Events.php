@@ -24,6 +24,7 @@ class Events extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+    public $cnt;
 	public function tableName()
 	{
 		return 'tbl_events';
@@ -83,7 +84,7 @@ class Events extends CActiveRecord
 					array('id_object'=>'id'),'through'=>'sensor'),
                         'enterprise'=>array(self::HAS_ONE,'Enterprise',
 					array('id_enterprise'=>'id'),'through'=>'object'), 
-                        'stype'=>array(self::HAS_ONE,'SType',
+                        'stype'=>array(self::HAS_ONE,'Stype',
                                         array('id_type'=>'id'),'through'=>'sensor'),
                         
 		);

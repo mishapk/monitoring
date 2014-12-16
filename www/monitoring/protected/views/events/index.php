@@ -7,7 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Events', 'url'=>array('create')),
+	array('label'=>'Statistics', 'url'=>array('statistics')),
+        //array('label'=>'Create Events', 'url'=>array('create')),
 	array('label'=>'Manage Events', 'url'=>array('admin')),
 );
 ?>

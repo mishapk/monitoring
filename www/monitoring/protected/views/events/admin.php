@@ -8,8 +8,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Events', 'url'=>array('index')),
-	array('label'=>'Create Events', 'url'=>array('create')),
+	array('label'=>'Statistics', 'url'=>array('statistics')),
+        array('label'=>'List Events', 'url'=>array('index')),
+	//array('label'=>'Create Events', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -49,7 +50,12 @@ function get($data)
     
 }
 ?>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+
+$options='';
+    if(!Yii::app()->user->checkAccess('root')) 
+        $options='display:none'; 
+        $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'events-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -74,6 +80,8 @@ function get($data)
 		*/
 		array(
 			'class'=>'CButtonColumn',
+                        'deleteButtonOptions'=>array('style'=>$options), 
+                        'updateButtonOptions'=>array('style'=>$options),    
 		),
 	),
 )); ?>

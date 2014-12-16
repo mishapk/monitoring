@@ -28,7 +28,7 @@ class EventsController extends Controller
 	{
 			return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','admin'),
+				'actions'=>array('index','view','admin','statistics'),
 				'users'=>array('@'),
 			),
 			
@@ -175,6 +175,52 @@ class EventsController extends Controller
 			'model'=>$model,
 		));
 	}
+        
+        public function actionStatistics()
+        {
+           
+            
+                
+            $l1=array_fill(0,12,0);
+            $l2=array_fill(0,12,0);
+            $l3=array_fill(0,12,0);
+            $l4=array_fill(0,12,0);
+            $l5=array_fill(0,12,0);
+            $mass=array($l1,$l2,$l3,$l4,$l5);
+            //$mass[4][0]=12;
+            $mass[0][8]=24;
+            $criteria = new CDbCriteria();
+                $i=0;
+		$id=yii::app()->user->getEID();
+		if($id>0){
+                $criteria->select='*, count(*) as cnt';    
+		$criteria->with=array('enterprise');
+		$criteria->condition='id_enterprise='.$id;
+                $criteria->order='t.id ASC';
+                $criteria->group='YEAR(created), MONTH(created),level_id';
+                
+		}
+                
+		$id=yii::app()->user->getEID();
+		$a=  Events::model()->findAll($criteria);
+                foreach ($a as $item)
+                {
+                    $month=Yii::app()->dateFormatter->format("M",strtotime($item->created));
+                    $count=$item->cnt;
+                    $level=$item->level_id;
+                    echo $item->created,' month= ', $month,' level =', $level, ' count= ', $count; 
+                   // echo '<hr/>';
+                    $mass[$level-1][$month-1]=$count;
+                    $i=$i+1;
+                }
+                echo 'Count=',$i;    
+		echo '<pre>';
+                //print_r($a);
+                echo '</pre>';
+		$this->render('statistics',array(
+			'mass'=>$mass,
+		));
+        }        
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

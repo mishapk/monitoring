@@ -8,7 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Enterprise', 'url'=>array('index')),
+	
+        array('label'=>'List Enterprise', 'url'=>array('index')),
 	array('label'=>'Create Enterprise', 'url'=>array('create')),
 );
 
