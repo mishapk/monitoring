@@ -86,7 +86,7 @@ class EventsController extends Controller
                         if (!($ids->id>0))throw new CHttpException(404, 'SNF:Sensor no found');
                         $model->sensor_id=$ids->id;
                         $idl= Level::model()->findByAttributes(array('level'=>$ps['sensor']['level']));
-                        if (!($idl->id>0))throw new CHttpException(404, 'LNF:Level no found');
+                        if (!($idl->id>-6))throw new CHttpException(404, 'LNF:Level no found');
                         $model->level_id=$idl->id;
               
 			if($model->save())
@@ -186,9 +186,9 @@ class EventsController extends Controller
             $l3=array_fill(0,12,0);
             $l4=array_fill(0,12,0);
             $l5=array_fill(0,12,0);
-            $mass=array($l1,$l2,$l3,$l4,$l5);
-            //$mass[4][0]=12;
-            $mass[0][8]=24;
+            $l6=array_fill(0,12,0);
+            $mass=array($l1,$l2,$l3,$l4,$l5,$l6);
+            
             $criteria = new CDbCriteria();
                 $i=0;
 		$id=yii::app()->user->getEID();
@@ -208,15 +208,16 @@ class EventsController extends Controller
                     $month=Yii::app()->dateFormatter->format("M",strtotime($item->created));
                     $count=$item->cnt;
                     $level=$item->level_id;
-                    echo $item->created,' month= ', $month,' level =', $level, ' count= ', $count; 
+                  //  echo $item->created,' month= ', $month,' level =', $level, ' count= ', $count; 
                    // echo '<hr/>';
-                    $mass[$level-1][$month-1]=$count;
+               
+                    $mass[$level][$month-1]=(int)$count;
                     $i=$i+1;
                 }
-                echo 'Count=',$i;    
-		echo '<pre>';
+          //      echo 'Count=',$i;    
+	//	echo '<pre>';
                 //print_r($a);
-                echo '</pre>';
+              //  echo '</pre>';
 		$this->render('statistics',array(
 			'mass'=>$mass,
 		));

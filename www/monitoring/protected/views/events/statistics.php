@@ -34,16 +34,17 @@ $this->Widget('ext.highcharts.HighchartsWidget', array(
       ),
        'plotOptions'=>array('column'=>array('stacking'=> 'normal')),
       'series' => array(
-        array('name' => 'Level I', 'data' =>$mass[0],'stack'=>'NI','color'=>'orange'),
-        array('name' => 'Level II', 'data' => $mass[1],'stack'=>'NI','color'=>'red'),
-        array('name' => 'Normal', 'data' => $mass[2],'stack'=>'TI','color'=>'green'), 
-        array('name' => 'Trables', 'data' => $mass[3],'stack'=>'NI','color'=>'gray'),
-        array('type'=>'line','name' => 'TestInterval', 'data' => $mass[4],'stack'=>'NI','color'=>'magenta')  
+        array('name' => 'Level I', 'data' =>$mass[1],'stack'=>'NI','color'=>'orange'),
+        array('name' => 'Level II', 'data' => $mass[2],'stack'=>'NI','color'=>'red'),
+        array('name' => 'Normal', 'data' => $mass[4],'stack'=>'TI','color'=>'green'), 
+        array('name' => 'Troubles', 'data' => $mass[3],'stack'=>'NI','color'=>'gray'),
+        array('type'=>'line','name' => 'TestInterval', 'data' => $mass[0],'stack'=>'NI','color'=>'blue'),  
+        array('type'=>'line','name' => 'StartSystem', 'data' => $mass[5],'color'=>'black')  
      )
    )
 ));
 
-echo'<pre>';
-print_r($mass);
-echo'</pre>';
+//echo'<pre>';
+//print_r($mass);
+//echo'</pre>';
 ?>

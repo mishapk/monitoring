@@ -6995,3 +6995,509 @@ Stack trace:
 REQUEST_URI=/monitoring/index.php?r=events/statistics
 HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/admin
 ---
+2014/12/16 19:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:38:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:42:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:52:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:58:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 19:59:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:01:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:02:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:03:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'SNF:Sensor no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:86
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:04:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:17:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:19:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/12/16 20:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:21:20 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (X:\home\monitoring.git\www\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(2255): tag()
+#2 X:\home\monitoring.git\www\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 X:\home\monitoring.git\www\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php(24): CActiveForm->textField()
+#5 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require()
+#6 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): EventsController->renderInternal()
+#7 X:\home\monitoring.git\www\framework\web\CController.php(869): EventsController->renderFile()
+#8 X:\home\monitoring.git\www\monitoring\protected\views\events\update.php(21): EventsController->renderPartial()
+#9 X:\home\monitoring.git\www\framework\web\CBaseController.php(126): require()
+#10 X:\home\monitoring.git\www\framework\web\CBaseController.php(95): EventsController->renderInternal()
+#11 X:\home\monitoring.git\www\framework\web\CController.php(869): EventsController->renderFile()
+#12 X:\home\monitoring.git\www\framework\web\CController.php(782): EventsController->renderPartial()
+#13 X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php(122): EventsController->render()
+#14 unknown(0): EventsController->actionUpdate()
+#15 X:\home\monitoring.git\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#16 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#17 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): EventsController->runAction()
+#19 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 X:\home\monitoring.git\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#21 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): EventsController->filterAccessControl()
+#22 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#23 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#24 X:\home\monitoring.git\www\framework\web\CController.php(265): EventsController->runActionWithFilters()
+#25 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): EventsController->run()
+#26 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#27 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 X:\home\monitoring.git\www\monitoring\index.php(13): CWebApplication->run()
+REQUEST_URI=/monitoring/index.php?r=events/update&id=354
+in X:\home\monitoring.git\www\monitoring\protected\views\events\_form.php (24)
+in X:\home\monitoring.git\www\monitoring\protected\views\events\update.php (21)
+in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php (122)
+2014/12/16 20:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:21:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
+2014/12/16 20:22:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:23:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:38:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+---
+2014/12/16 20:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'LNF:Level no found' in X:\home\monitoring.git\www\monitoring\protected\controllers\EventsController.php:89
+Stack trace:
+#0 X:\home\monitoring.git\www\framework\web\actions\CInlineAction.php(49): EventsController->actionCreate()
+#1 X:\home\monitoring.git\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 X:\home\monitoring.git\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 X:\home\monitoring.git\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 X:\home\monitoring.git\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 X:\home\monitoring.git\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 X:\home\monitoring.git\www\framework\web\CController.php(291): CFilterChain->run()
+#8 X:\home\monitoring.git\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 X:\home\monitoring.git\www\framework\web\CWebApplication.php(282): CController->run('create')
+#10 X:\home\monitoring.git\www\framework\web\CWebApplication.php(141): CWebApplication->runController('events/create')
+#11 X:\home\monitoring.git\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 X:\home\monitoring.git\www\monitoring\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/monitoring/index.php?r=events/create
+HTTP_REFERER=http://monitoring.git/monitoring/index.php?r=events/create
+---
